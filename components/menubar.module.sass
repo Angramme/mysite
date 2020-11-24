@@ -1,0 +1,55 @@
+@import "../styles/global_vars.sass"
+@import "../styles/CSS3_mixins.scss"
+
+
+.profile_pic
+    height: 2.2rem
+    position: absolute
+    top: 0.8rem
+    margin-left: 2rem
+    
+    text-align: center
+    vertical-align: middle
+ 
+.bar
+    z-index: 100
+    backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
+    position: fixed
+    top:0
+    left:0
+    right:0
+    padding: 1rem
+    padding-top: 1.5rem
+    padding-right: 4rem
+    border-bottom: solid $border-color 1px
+    
+
+.header
+    font-size: 2.5vh
+    font-weight: bold
+    margin: 0 5rem 0 5rem
+    display: inline
+    +transition(filter 0.4s, color 0.5s)
+    
+
+    &:hover, &:active
+        cursor: pointer
+        color: $selected-color
+        // text-decoration: underline
+        filter: blur(1px)
+
+.button
+    font-size: 2.2vh
+    display: inline
+    // float: right
+    padding: 0 1rem
+    border-right: solid 1px
+    border-left: solid 1px
+    border-color: transparent
+    transition: color 0.5s
+
+    &:hover, &:active
+        color: $selected-color
+        cursor: pointer
+        font-weight: bold
+        border-color: $border-color

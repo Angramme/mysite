@@ -1,9 +1,15 @@
 html,
 body {
+  background-color: rgb(38, 40, 44);
+  /* background: url("/stars.jpg"); */
+  color: rgb(192, 181, 178);
+  overflow-x: hidden;
+
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Courier, New, monospace;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
@@ -12,5 +18,6 @@ a {
 }
 
 * {
+  z-index: inherit;
   box-sizing: border-box;
 }

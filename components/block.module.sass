@@ -1,0 +1,17 @@
+@import "../styles/global_vars"
+@import "../styles/CSS3_mixins.scss"
+
+.container
+    margin: 1rem
+
+.header
+    // font-weight: bold
+    font-size: 4.5vh
+    margin-left: 0.6rem
+    margin-bottom: 0.5rem
+
+.block
+    border: solid 1px $border-color
+    backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
+    +border-radius(0.6rem)
+    padding: 1rem
