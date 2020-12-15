@@ -5,8 +5,8 @@
 
 html,
 body {
-  background-color: rgb(38, 40, 44);
-  /* background: url("/stars.jpg"); */
+  /* background-color: rgb(38, 40, 44); */
+  background: linear-gradient(90deg, rgb(31, 31, 34), rgb(43, 47, 53));
   color: rgb(192, 181, 178);
   overflow-x: hidden;
 
@@ -26,3 +26,4 @@ a {
   z-index: inherit;
   box-sizing: border-box;
 }
+

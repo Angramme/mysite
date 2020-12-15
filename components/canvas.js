@@ -5,7 +5,7 @@ export default function Canvas({script, style}){
 
     useEffect(()=>{
         const can = can_ref.current;
-        script(can);
+        return script(can);
     }, [])
 
     return <canvas ref={can_ref} style={style}/>

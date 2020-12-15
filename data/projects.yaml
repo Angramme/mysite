@@ -1,0 +1,27 @@
+
+
+imgtoascii:
+  hide: true
+
+dire:
+  img: "terminal.jpg"
+
+GrLang:
+  # img: "grlang2.png"
+  img: terminal.jpg
+
+aids_projet_si:
+  alias: anti-intrusion-detection-system
+
+polyrhythm:
+  img: "polyrhythm.png"
+  live: https://angramme.github.io/polyrhythm/
+polyrhythm-v1:
+  alias: polyrhythm alpha
+  put_after: polyrhythm
+  img: "polyrhythm.png"
+  live: https://angramme.github.io/polyrhythm-v1/
+
+simple-L-system-tree:
+  alias: L Tree
+  img: L-tree.png

@@ -1,8 +1,8 @@
 import Canvas from "../components/canvas"
-
+import lava from "../lib/animated_backgrounds/lava.js"
 
 export default function AnimBackground(){
-    return <Canvas script={doStuff} style={
+    return <Canvas script={hook} style={
         {
             position:"fixed",
             top:0,
@@ -15,37 +15,79 @@ export default function AnimBackground(){
     }></Canvas>
 }
 
-function doStuff(can){
+function hook(can){
+    const bCan = document.createElement("canvas");
+    const bC = bCan.getContext('2d');
     const C = can.getContext('2d');
 
+    let eventListenerCleanup = [];
+    const safeAddEventListener = (t, cb, opt)=>{
+        eventListenerCleanup.push({t, cb, opt});
+        window.addEventListener(t, cb, opt);
+    };
+    const cleanupEventListeners = ()=>{
+        for(let {t, cb, opt} of eventListenerCleanup){
+            window.removeEventListener(t, cb, opt);
+        }
+    };
+
     const resize = ()=>{
+        bCan.width = window.innerWidth;
+        bCan.height = window.innerHeight;
         can.width = window.innerWidth;
         can.height = window.innerHeight;
     };
 
-    const redraw = ()=>{
-        C.clearRect(0, 0, can.width, can.height);
-        C.fillStyle = "white";
-        for(let i=0; i<500; i++){
-            let x = Math.random()*can.width;
-            let y = Math.random()*can.height;
-            C.fillRect(x, y, 0.5, 2);
+    const redraw_background = ()=>{
+        bC.clearRect(0, 0, bCan.width, bCan.height);
+        for(let i=0; i<200; i++){
+            bC.fillStyle = ["yellow", "red", "blue", "white"][Math.random()*4|0];
+            let x = Math.random()*bCan.width|0;
+            let y = Math.random()*bCan.height|0;
+            bC.fillRect(x, y, .8, 2+Math.random()*1.5);
         }
-        for(let i=0; i<5; i++){
-            C.beginPath();
-            C.moveTo(0, can.height*(0.65+Math.pow(i, 1.5)*0.11));
-            C.lineTo(can.width*(0.8+i*0.02), 0);
-            C.lineWidth = 2;
-            C.strokeStyle = "#6600dd";
-            C.closePath();
-            C.stroke();
-        }
+    }
+
+    let y = 0;
+    const redraw = (dt)=>{
+        y += 0.02*dt;
+        if(y<0) y += can.height;
+        y %= can.height;
+        C.clearRect(0, 0, bCan.width, bCan.height);
+        C.drawImage(bCan, 0, y);
+        C.drawImage(bCan, 0, y-can.height);
+        if(!dt) dt = 0
     };
+    let lScrollY = window.scrollY;
+    safeAddEventListener("scroll", ()=>{
+        let dScrollY = lScrollY - window.scrollY;
+        lScrollY = window.scrollY;
+        y += dScrollY*0.07;
+    })
 
     const update = ()=>{
-        resize();
-        redraw();
+        resize(); 
+        redraw_background();
+        redraw(0);
     }
-    window.addEventListener("resize", update);
+    safeAddEventListener("resize", update);
     update();
+
+    let last = Date.now();
+    let ENDLOOP = false;
+    const loop = ()=>{
+        let nw = Date.now();
+        let dt = nw-last;
+        last = nw;
+
+        redraw(dt);
+        if(!ENDLOOP)
+            requestAnimationFrame(loop);
+    }
+    loop();
+
+    return function cleanup(){
+        ENDLOOP = true;
+        cleanupEventListeners();
+    }
 }
