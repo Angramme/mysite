@@ -11,30 +11,25 @@ import {FaGithub} from "react-icons/fa"
 
 
 
+
+
 const MAX_DESC_LEN = 5;
 function regexIndexOf(str, regex, startpos) {
     var indexOf = str.substring(startpos || 0).search(regex);
     return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
 }
 function firstNlines(str, N){
-    let n = 0;
-    let i = 0;
-    while(n<N){
-        n++;
-        let ni = regexIndexOf(str, /\n/, i)
-        if(ni == -1)
-            break
-        let ni2 = regexIndexOf(str, /[^\n]/, ni)
-        i = ni2
-    }
-    return str.substring(0, i);
+    return str.substring(0, N*60);
 }
 const md_renderers = {
     // text: ({value})=><div>{value}</div>
-    heading: ({children})=><h3>{children}</h3>
+    image: ({alt})=><i>[{alt}]</i>,
+    heading: ({children})=><h3>{children}</h3>,
+    link: ({children, href})=><a href={href} target="_blank" className={styles.md_link}>{children}</a>,
 }
 
-export default function Project({project}){
+export default function Project({project}){  
+    const no_desc = project.readme_md.length == 0 || project.image_only;
     return <div className={styles.project}>
         <div className={styles.left}>
             <div className={styles.title}>{project.alias || project.name}</div>
@@ -44,25 +39,26 @@ export default function Project({project}){
             <div className={styles.language}>:: {project.language}</div>
             <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
                 <div className={styles.options}>
-                    <div><CgReadme/> About</div>
-                    <div><FaGithub/> GitHub</div>
                     {!project.live ? "" : <a href={project.live} target="_blank"><div><CgPlayButtonO/> Live Demo</div></a>}
+                    <div><CgReadme/> About</div>
+                    <a href={project.repo_page_url} target="_blank"><div><FaGithub/> GitHub</div></a>
                 </div>
             </IconContext.Provider>
         </div>
-        <div>
-            <div className={project.readme_md.length < 2 ? 
-                styles.img_container_full : styles.img_container}>
-                <img className={styles.img} src={project.img || "/stars2.jpg"}></img>
+        <div className={styles.right}>
+            <div className={no_desc ? styles.img_container_full : styles.img_container}>
+                <img className={styles.img} 
+                    src={project.img || "/code.jpeg"} alt="banner image"></img>
             </div>
-            {project.readme_md.length < 2 ? "" : 
+            {no_desc ? "" : 
             <div className={styles.desc}>
-                {/* {sentences(80)} */}
-                {/* <div dangerouslySetInnerHTML={{__html: project.readme_html}}></div> */}
-                <ReactMarkdown 
-                    children={firstNlines(project.readme_md, MAX_DESC_LEN)+"..."} 
-                    renderers={md_renderers}
-                    className={styles.markdown}></ReactMarkdown>
+                <div className={styles.desc_cutoff}>
+                    <ReactMarkdown 
+                        children={firstNlines(project.readme_md, MAX_DESC_LEN)+"..."} 
+                        renderers={md_renderers}
+                        className={styles.markdown}>
+                    </ReactMarkdown>
+                </div>
 
                 <div className={styles.readMore}> > read more</div>
             </div>}
