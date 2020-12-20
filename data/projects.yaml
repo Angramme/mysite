@@ -1,0 +1,55 @@
+
+___pinned:
+  - polyrhythm
+  - GrLang
+  - mudi
+  - TreeGenerator
+  - steganograph
+  - dire
+
+imgtoascii:
+  hide: true
+
+dire:
+  img: "terminal.jpg"
+
+GrLang:
+  # img: "grlang2.png"
+  img: terminal.jpg
+
+aids_projet_si:
+  alias: anti-intrusion-detection-system
+  img: aids_cam.png
+  image_only: true
+
+polyrhythm:
+  img: "polyrhythm.png"
+  live: https://angramme.github.io/polyrhythm/
+polyrhythm-v1:
+  hide: true
+  alias: polyrhythm alpha
+  img: "polyrhythm.png"
+  live: https://angramme.github.io/polyrhythm-v1/
+
+simple-L-system-tree:
+  alias: L Tree
+  img: L-tree.png
+
+TreeGenerator:
+  alias: Tree Generator
+  image_only: true
+
+mudi:
+  image_only: true
+  img: mudi.png
+  live: https://angramme.github.io/mudi/
+
+new-year-fireworks:
+  live: https://angramme.github.io/new-year-fireworks/
+  img: newyear.png
+  image_only: true
+
+bad-tetris:
+  live: https://angramme.github.io/bad-tetris/
+  alias: bad tetris
+  img: tetris.png

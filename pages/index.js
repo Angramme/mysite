@@ -1,10 +1,13 @@
 import Head from 'next/head'
+import Link from "next/link"
 import Menubar from "../components/menubar"
 import Layout from "../components/layout"
 import Block from "../components/block"
 import Footer from "../components/footer"
 import AnimBackground from "../components/AnimatedBackground"
 // import random_sentences from "../helpers/sentences"
+
+import styles from "../styles/index.module.sass"
 
 import css_helpers from "../styles/organisation.module.sass"
 
@@ -17,7 +20,7 @@ export default function  Home(){
         </Head>
         <Menubar></Menubar>
         <AnimBackground></AnimBackground>
-        <Layout style={{zIndex:5}}>
+        <Layout>
             <div className={css_helpers.line}>
                 <div>
                     <img src="/me.jpg"></img>
@@ -36,11 +39,11 @@ export default function  Home(){
                 </div>
                 <Block title="About me">
                     {/* {random_sentences(50)} */}
-                    Hi! I'm Kacper, a first year student of CS and Math at Sorbonne University, Jussieu Campus. 
+                    Hi! I'm Kacper, a first year student of CS and Math at <b>Sorbonne University</b>, Jussieu Campus. 
                     I first stared programming by myself in 2016 at the age of 14. It became my passion ever since.
+                    I speak 3 languages fluently, <b>English, French, Polish</b>.
                     I also occasionally play piano, paint, draw, all that stuff that makes my time schedule seem
-                    balanced, and legally permits me to call myself a musician and artist. I speak 3 languages 
-                    fluently, Polish, French, English.
+                    balanced, and legally permits me to call myself a musician and artist.
                 </Block>
             </div>
             <Block title="Competences" style={{marginTop:"5rem"}}>
@@ -69,9 +72,11 @@ export default function  Home(){
                             <li>Fastify</li>
                             <li>Express</li>
                             <li>Next.js</li>
+                            <li>React</li>
                             <li>OpenCV</li>
                             <li>Three.js</li>
                             <li>p5.js</li>
+                            <li>Babel</li>
                         </ul>
                     </div>
                     <div>
@@ -86,14 +91,8 @@ export default function  Home(){
                     </div>
                 </div>
             </Block>
-            <div style={{
-                textAlign:"center",
-                marginTop:"4rem",
-                marginBottom:"4rem",
-                fontSize:"2.8vh",
-                cursor:"pointer",
-            }}>
-                > See My Projects >
+            <div className={styles.seemyprojects}>
+                <Link href="/projects"> > See My Projects > </Link>
             </div>
         </Layout>
         <Footer></Footer>

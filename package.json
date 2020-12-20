@@ -8,9 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@octokit/rest": "^18.0.12",
+    "dotenv": "^8.2.0",
+    "get-md-image": "^1.0.2",
+    "js-yaml-loader": "^1.2.2",
     "next": "10.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-icons": "^4.1.0",
+    "react-markdown": "^5.0.3",
     "sass": "^1.29.0",
     "seed-random": "^2.2.0"
   }
