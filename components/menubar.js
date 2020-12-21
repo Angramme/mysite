@@ -10,9 +10,11 @@ export default function MenuBar() {
 
     return <div className={styles.bar}>
             <img className={styles.profile_pic} src="/profile-trans.png"></img>
-            <div className={styles.header}>
-                Ozieblowski Kacper
-            </div>
+            <Link href="/">
+                <div className={styles.header}>
+                    Ozieblowski Kacper
+                </div>
+            </Link>
             {Object.keys(menu_options).map((e, i) => {
                 return <Link href={menu_options[e]} key={i}>
                     <div className={styles.button}>

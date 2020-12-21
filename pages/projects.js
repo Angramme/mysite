@@ -8,7 +8,7 @@ import AnimBackground from "../components/AnimatedBackground"
 // import random_sentences from "../helpers/sentences"
 
 import css_helpers from "../styles/organisation.module.sass"
-import {get_repos} from "../lib/repos"
+import {get_repos, GITHUB_RATE_LIMIT} from "../lib/repos"
 
 export async function getStaticProps(){
     const projects = await get_repos();
@@ -17,7 +17,7 @@ export async function getStaticProps(){
         props: {
             projects,
         },
-        revalidate: 5*60, // 5 minutes //github rate limit
+        revalidate: GITHUB_RATE_LIMIT, //re-render
     }
 }
 
