@@ -11,8 +11,7 @@ import {atomDark as dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import styles from "../../styles/project.module.sass"
 
 import {IconContext} from "react-icons"
-import {CgArrowTopLeftR as Arrow} from "react-icons/cg"
-import {CgPlayButtonO, CgReadme} from "react-icons/cg"
+import {CgSoftwareDownload as CgRelease, CgDanger, CgPlayButtonO, CgArrowTopLeftR as Arrow} from "react-icons/cg"
 import {FaGithub} from "react-icons/fa"
 
 import ReactMarkdown from 'react-markdown'
@@ -43,7 +42,9 @@ export async function getStaticPaths(){
 const md_renderers = {
     // text: ({value})=><div>{value}</div>
     image: ({alt, src})=><div className={styles.md_image}>
-        <img src={src}></img>
+        <a href={src} target="_blank">
+            <img src={src} alt={alt}></img>
+        </a>
         <div className={styles.md_img_desc}>{alt.trim()}</div>
     </div>,
     heading: ({children})=><h1 className={styles.md_heading}>{children}</h1>,
@@ -65,6 +66,7 @@ export default function Project({project}){
                 <h1 className={styles.title}>{project.name}</h1>
                 <div className={styles.options}>
                     {!project.live ? "" : <a href={project.live} target="_blank"><div><CgPlayButtonO/> Live Demo</div></a>}
+                    {!project.latest_release ? "" : <a href={project.latest_release.html_url} target="_blank"><div><CgRelease/> {project.latest_release.tag_name}</div></a>}
                     <a href={project.repo_page_url} target="_blank"><div><FaGithub/> GitHub</div></a>
                 </div>
             </Block>
@@ -75,7 +77,9 @@ export default function Project({project}){
                     renderers={md_renderers}
                     ></ReactMarkdown>
                 {project.readme_md.length==0?
-                    "Sorry, this project doesn't have a readme":""}
+                    <div className={styles.no_readme}>
+                        <CgDanger/> Sorry, this project doesn't have a readme
+                    </div>:""}
             </Block>
         </IconContext.Provider>
     </Layout>

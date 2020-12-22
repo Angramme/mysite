@@ -7,8 +7,10 @@ import Footer from "../components/footer"
 import AnimBackground from "../components/AnimatedBackground"
 // import random_sentences from "../helpers/sentences"
 
-import styles from "../styles/index.module.sass"
+import { IconContext } from 'react-icons'
+import {CgWebsite as Arrow} from "react-icons/cg"
 
+import styles from "../styles/index.module.sass"
 import css_helpers from "../styles/organisation.module.sass"
 
 export default function  Home(){
@@ -16,12 +18,12 @@ export default function  Home(){
         <>
         <Head>
             <title>About</title>
-            <link rel="icon" href="profile-trans.png"/>
+            <link rel="icon" href="/profile-trans.png"/>
         </Head>
         <Menubar></Menubar>
         <AnimBackground></AnimBackground>
         <Layout>
-            <div className={css_helpers.line}>
+            <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
                 <div>
                     <img src="/me.jpg"></img>
                     <div>Figure 1.1 : My stupid face.</div>
@@ -43,10 +45,10 @@ export default function  Home(){
                     I first stared programming by myself in 2016 at the age of 14. It became my passion ever since.
                     I speak 3 languages fluently, <b>English, French, Polish</b>.
                     I also occasionally play piano, paint, draw, all that stuff that makes my time schedule seem
-                    balanced, and legally permits me to call myself a musician and artist.
+                    balanced, and "legally" permits me to call myself a musician and an artist.
                 </Block>
             </div>
-            <Block title="Competences" style={{marginTop:"5rem"}}>
+            <Block title="Competences">
                 <p>
                     I have experience with several progamming languages which include primarly JS, Node.js, Python, C++, Haskell, 
                     C, GLSL, Processing, CSS (SASS, SCSS) and HTML. I also have pretty limited knowledge of Java, Rust, Lua, SQL, MongoDB, and others.
@@ -92,7 +94,11 @@ export default function  Home(){
                 </div>
             </Block>
             <div className={styles.seemyprojects}>
-                <Link href="/projects"> > See My Projects > </Link>
+                <Link href="/projects">
+                    <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
+                        <Arrow/> See My Projects <Arrow/>
+                    </IconContext.Provider>
+                </Link>
             </div>
         </Layout>
         <Footer></Footer>

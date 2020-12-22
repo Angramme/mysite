@@ -5,7 +5,7 @@ import Link from "next/link"
 import ReactMarkdown from 'react-markdown'
 
 import {IconContext} from "react-icons"
-import {CgPlayButtonO, CgReadme, CgDetailsMore} from "react-icons/cg"
+import {CgSoftwareDownload as CgRelease, CgPlayButtonO, CgReadme, CgDetailsMore} from "react-icons/cg"
 import {FaGithub} from "react-icons/fa"
 
 
@@ -43,6 +43,7 @@ export default function Project({project}){
                     {!project.live ? "" : <a href={project.live} target="_blank"><div><CgPlayButtonO/> Live Demo</div></a>}
                     <Link href={proj_page}><div><CgReadme/> About</div></Link>
                     <a href={project.repo_page_url} target="_blank"><div><FaGithub/> GitHub</div></a>
+                    {!project.latest_release ? "" : <a href={project.latest_release.html_url} target="_blank"><div><CgRelease/> {project.latest_release.tag_name}</div></a>}
                 </div>
             </div>
             <div className={styles.right}>

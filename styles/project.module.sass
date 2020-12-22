@@ -37,8 +37,10 @@ $accent-color: rgb(89, 114, 255)
 
 .md
     font-size: 1.9vh
+    margin: 1.5rem
 
 .md_heading
+    text-indent: 0
     // text-decoration: underline wavy
     color: $accent-color
     font-size: 3vh
@@ -50,15 +52,27 @@ $accent-color: rgb(89, 114, 255)
         color: $accent-color
 
 .md_image
+    background: rgba(0, 0, 0, 0.2)
     display: block
-    margin: 2rem
+    padding: 1rem
     & img
+        cursor: zoom-in
         border-radius: $border-radius
         margin: auto
         display: block
         max-height: 50vh
         max-width: 90%
+        transition: top 0.2s
+        position: relative
+        top: 0
+    & img:hover
+        top: -0.1rem
+
     & .md_img_desc
         text-indent: 0
         margin-top: 0.2rem
         text-align: center
+
+.no_readme
+    margin: 1rem
+    color: #fd3333
