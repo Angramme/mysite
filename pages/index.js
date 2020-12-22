@@ -94,11 +94,13 @@ export default function  Home(){
                 </div>
             </Block>
             <div className={styles.seemyprojects}>
+                <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
                 <Link href="/projects">
-                    <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
+                    <div>
                         <Arrow/> See My Projects <Arrow/>
-                    </IconContext.Provider>
+                    </div>
                 </Link>
+                </IconContext.Provider>
             </div>
         </Layout>
         <Footer></Footer>
