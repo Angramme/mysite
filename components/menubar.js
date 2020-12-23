@@ -42,18 +42,20 @@ export default function MenuBar() {
     })
 
     return <div className={styles.bar} ref={bar_ref}>
-            <img className={styles.profile_pic} src="/profile-trans.png"></img>
             <Link href="/">
                 <div className={styles.header}>
+                    <img className={styles.profile_pic} src="/profile-trans.png"></img>
                     Ozieblowski Kacper
                 </div>
             </Link>
-            {Object.keys(menu_options).map((e, i) => {
-                return <Link href={menu_options[e]} key={i}>
-                    <div className={styles.button}>
-                        {e}
+            <div className={styles.btns}>
+                {Object.keys(menu_options).map((e, i) => {
+                    return <div className={styles.button} key={i}>
+                        <Link href={menu_options[e]} >
+                            {e}
+                        </Link> 
                     </div>
-                </Link> 
-            })}
+                })}
+            </div>
         </div>
 }

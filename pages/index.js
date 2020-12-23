@@ -41,7 +41,7 @@ export default function  Home(){
                 </div>
                 <Block title="About me">
                     {/* {random_sentences(50)} */}
-                    Hi! I'm Kacper, a first year student of CS and Math at <b>Sorbonne University</b>, Jussieu Campus. 
+                    Hi! I'm Kacper Ozieblowski, a first year student of CS and Math at <b>Sorbonne University</b>, Jussieu Campus. 
                     I first stared programming by myself in 2016 at the age of 14. It became my passion ever since.
                     I speak 3 languages fluently, <b>English, French, Polish</b>.
                     I also occasionally play piano, paint, draw, all that stuff that makes my time schedule seem
