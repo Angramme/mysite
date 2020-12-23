@@ -16,8 +16,10 @@
     &:hover
         border-color: $selected-color
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25)
-    @media (max-aspect-ratio: 1/2)
+    @media #{$is-a-phone}
         flex-direction: column
+        backdrop-filter: none
+        background: $frosted-glass-opaque
 
 .left
     position: relative
@@ -29,7 +31,7 @@
     // max-height: 35vh
     flex-grow: 0
     flex-shrink: 0
-    @media (max-aspect-ratio: 1/2)
+    @media #{$is-a-phone}
         width: unset
 
 .right
@@ -38,6 +40,7 @@
     height: 100%
 
 .title
+    word-break: break-all
     font-weight: bold
     font-size: 2.5vh
     margin-bottom: 1rem
@@ -56,7 +59,7 @@
 .language
     margin: 0.8rem 0
     margin-bottom: 6rem
-    @media (max-aspect-ratio: 1/2)
+    @media #{$is-a-phone}
         margin-bottom: 1rem
 
 .options
@@ -70,7 +73,7 @@
         transition: 0.2s color
         &:hover
             color: $selected-color
-    @media (max-aspect-ratio: 1/2)
+    @media #{$is-a-phone}
         position: relative
         bottom: 0
         left: 0

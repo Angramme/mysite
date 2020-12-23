@@ -61,7 +61,6 @@ export default function Project({project}){
             <link rel="icon" href="/profile-trans.png"/>
         </Head>
         <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
-            <Link href="/projects"><div className={styles.back_btn}> <Arrow></Arrow> go back </div></Link>
             <Block className={styles.banner} style={{backgroundImage:`url(${project.img})`}}>
                 <h1 className={styles.title}>{project.name}</h1>
                 <div className={styles.options}>
@@ -81,6 +80,7 @@ export default function Project({project}){
                         <CgDanger/> Sorry, this project doesn't have a readme
                     </div>:""}
             </Block>
+            <Link href="/projects"><div className={styles.back_btn}> <Arrow></Arrow> go back </div></Link>
         </IconContext.Provider>
     </Layout>
     <Footer></Footer>

@@ -1,4 +1,5 @@
 import Canvas from "../components/canvas"
+import {clientside_check as is_mobile} from "../lib/is_mobile"
 import lava from "../lib/animated_backgrounds/lava.js"
 
 export default function AnimBackground(){
@@ -16,6 +17,7 @@ export default function AnimBackground(){
 }
 
 function hook(can){
+    const isPhone = is_mobile();
     const bCan = document.createElement("canvas");
     const bC = bCan.getContext('2d');
     const C = can.getContext('2d');
@@ -58,12 +60,14 @@ function hook(can){
         C.drawImage(bCan, 0, y-can.height);
         if(!dt) dt = 0
     };
-    let lScrollY = window.scrollY;
-    safeAddEventListener("scroll", ()=>{
-        let dScrollY = lScrollY - window.scrollY;
-        lScrollY = window.scrollY;
-        y += dScrollY*0.07;
-    })
+    if(!isPhone){
+        let lScrollY = window.scrollY;
+        safeAddEventListener("scroll", ()=>{
+            let dScrollY = lScrollY - window.scrollY;
+            lScrollY = window.scrollY;
+            y += dScrollY*0.07;
+        })
+    }
 
     const update = ()=>{
         resize(); 

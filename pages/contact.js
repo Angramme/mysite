@@ -18,7 +18,7 @@ export default function Contact(){
         <AnimatedBackground/>
         <Layout>
             <MenuBar></MenuBar>
-            <Block title="Contact" style={{textIndent:0, padding:"2rem"}}>
+            <Block title="Contact" style={{textIndent:0, padding:"2rem", wordBreak:"break-word"}}>
                 You can contact me by:
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
                     <ul>

@@ -4,7 +4,7 @@
 .line
     display: flex
     flex-direction: row
-    @media (max-aspect-ratio: 1/2)
+    @media #{$is-a-phone}
         flex-direction: column
 
 .line-wrap
