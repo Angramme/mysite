@@ -5,7 +5,9 @@ import Link from "next/link"
 import ReactMarkdown from 'react-markdown'
 
 import {IconContext} from "react-icons"
+
 import {CgSoftwareDownload as CgRelease, CgPlayButtonO, CgReadme, CgDetailsMore} from "react-icons/cg"
+
 import {FaGithub} from "react-icons/fa"
 
 
@@ -29,16 +31,19 @@ const md_renderers = {
 }
 
 export default function Project({project}){  
+
     const proj_page = "/p/"+project.name;
     const no_desc = project.readme_md.length == 0 || project.image_only;
     return <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
     <div className={styles.project}>
+
         <div className={styles.left}>
             <div className={styles.title}>{project.alias || project.name}</div>
             <div className={styles.little_desc}>
                 {project.description}
             </div>
             <div className={styles.language}>:: {project.language}</div>
+
                 <div className={styles.options}>
                     {!project.live ? "" : <a href={project.live} target="_blank"><div><CgPlayButtonO/> Live Demo</div></a>}
                     <Link href={proj_page}><div><CgReadme/> About</div></Link>
@@ -68,4 +73,5 @@ export default function Project({project}){
             </div>
         </div>
     </IconContext.Provider>
+
 }

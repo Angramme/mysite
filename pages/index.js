@@ -7,10 +7,12 @@ import Footer from "../components/footer"
 import AnimBackground from "../components/AnimatedBackground"
 // import random_sentences from "../helpers/sentences"
 
+
 import { IconContext } from 'react-icons'
 import {CgWebsite as Arrow} from "react-icons/cg"
 
 import styles from "../styles/index.module.sass"
+
 import css_helpers from "../styles/organisation.module.sass"
 
 export default function  Home(){
@@ -24,6 +26,7 @@ export default function  Home(){
         <AnimBackground></AnimBackground>
         <Layout>
             <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
+
                 <div>
                     <img src="/me.jpg"></img>
                     <div>Figure 1.1 : My stupid face.</div>
