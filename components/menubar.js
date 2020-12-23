@@ -1,6 +1,8 @@
 import styles from "./menubar.module.sass"
 import Link from "next/link"
+
 import {useRef, useEffect} from "react"
+
 
 export default function MenuBar() {
     const menu_options = {
@@ -8,6 +10,7 @@ export default function MenuBar() {
         "Projects":"/projects", 
         "Contact":"/contact"
     }
+
 
     let bar_ref = useRef(null);
     let lY = 0;
@@ -57,5 +60,6 @@ export default function MenuBar() {
                     </div>
                 })}
             </div>
+
         </div>
 }
