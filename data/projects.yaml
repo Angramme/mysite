@@ -45,6 +45,7 @@ mudi:
   live: https://angramme.github.io/mudi/
 
 new-year-fireworks:
+  alias: fireworks
   live: https://angramme.github.io/new-year-fireworks/
   img: newyear.png
   image_only: true
