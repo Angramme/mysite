@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+b {
+  color: rgb(199, 176, 134)
+}
+
 * {
   z-index: inherit;
   box-sizing: border-box;
