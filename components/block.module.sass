@@ -1,6 +1,8 @@
 @import "../styles/global_vars"
 @import "../styles/CSS3_mixins.scss"
 
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap')
+
 .container
     margin: 1rem
 
@@ -12,10 +14,13 @@
     // font-family: Medieval
 
 .block
+    // font-family: 'Quicksand', sans-serif
+    line-height: 1.2em
+
     border: solid 0.1px $border-color
-    background: $frosted-glass
+    background: $frosted-glass-opaque
+    // backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
-    backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
     +border-radius($border-radius)
     padding: 1rem
     text-indent: 1.5rem

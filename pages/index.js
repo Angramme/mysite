@@ -53,9 +53,11 @@ export default function  Home(){
             </div>
             <Block title="Competences">
                 <p>
-                    I have experience with several progamming languages which include primarly JS, Node.js, Python, C++, Haskell, 
-                    C, GLSL, Processing, CSS (SASS, SCSS) and HTML. I also have pretty limited knowledge of Java, Rust, Lua, SQL, MongoDB, and others.
-                    In the next year at the uni, I will also learn OCaml.
+                    I have experience with several progamming languages which include primarly <b>JS</b>, <b>Node.js</b>, 
+                    <b>Python</b>, <b>C++</b>, <b>Haskell</b>, 
+                    <b>C</b>, <b>GLSL</b>, <b>Processing</b>, <b>CSS</b> (<b>SASS</b>, <b>SCSS</b>) and <b>HTML</b>. 
+                    I also have pretty limited knowledge of <b>Java</b>, <b>Rust</b>, <b>Lua</b>, <b>SQL</b>, <b>MongoDB</b>, and others.
+                    In the next year at the uni, I will also learn <b>OCaml</b>.
                 </p>
                 <p>
                     I have some experience with various libraries: <br/>

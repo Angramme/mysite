@@ -8,7 +8,8 @@ export default function MenuBar() {
     const menu_options = {
         "About":"/", 
         "Projects":"/projects", 
-        "Contact":"/contact"
+        "Shadertoy":"https://www.shadertoy.com/user/Angramme",
+        "Contact":"/contact",
     }
 
 
@@ -54,9 +55,16 @@ export default function MenuBar() {
             <div className={styles.btns}>
                 {Object.keys(menu_options).map((e, i) => {
                     return <div className={styles.button} key={i}>
-                        <Link href={menu_options[e]} >
-                            {e}
-                        </Link> 
+                        {
+                            menu_options[e][0] != "/" ?
+                            <a href={menu_options[e]} target="_blank">
+                                {e}
+                            </a>
+                            :
+                            <Link href={menu_options[e]} >
+                                {e}
+                            </Link> 
+                        }
                     </div>
                 })}
             </div>
