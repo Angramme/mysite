@@ -55,9 +55,14 @@
     display: inline
     @media #{$is-a-phone}
         margin: 0
-        margin-top: 0.5rem
         display: block
         text-align: center
+
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        
         
 
 .button
@@ -69,6 +74,8 @@
     border-left: solid 1px
     border-color: transparent
     transition: color 0.5s
+
+    margin-top: 0.5rem
 
     &:hover, &:active
         color: $selected-color
