@@ -59,14 +59,15 @@ function hook(can){
         if(y<0) y += can.height;
         y %= can.height;
         C.clearRect(0, 0, bCan.width, bCan.height);
-        C.drawImage(bCan, 0, y);
-        C.drawImage(bCan, 0, y-can.height);
+        C.drawImage(bCan, 0, y|0);
+        C.drawImage(bCan, 0, (y-can.height)|0);
         if(!dt) dt = 0
     };
 
     if(!isPhone){
         let lScrollY = window.scrollY;
         safeAddEventListener("scroll", ()=>{
+            fps_limit = 60
             let dScrollY = lScrollY - window.scrollY;
             lScrollY = window.scrollY;
             y += dScrollY*0.07;
@@ -82,14 +83,18 @@ function hook(can){
     safeAddEventListener("resize", update);
     update();
 
+    let fps_limit = 20;
     let last = Date.now();
     let ENDLOOP = false;
     const loop = ()=>{
         let nw = Date.now();
         let dt = nw-last;
-        last = nw;
 
-        redraw(dt);
+        if(dt >= 1000/fps_limit){
+            redraw(dt);
+            last = nw;
+            fps_limit = 20;
+        }
         if(!ENDLOOP)
             requestAnimationFrame(loop);
     }
