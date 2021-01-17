@@ -21,14 +21,19 @@ export default function  Home(){
         <Head>
             <title>About</title>
             <link rel="icon" href="/profile-trans.png"/>
+            <meta name="description" content="I'm Kacper Ozieblowski, a first year student of CS and Math at Sorbonne University, Jussieu Campus..." />
+            <meta name="google-site-verification" content="YUhAriA3rDQtAwhc7pKtYtz9gIt8ezDUAFXpHKNM2jQ" />
         </Head>
         <Menubar></Menubar>
         <AnimBackground></AnimBackground>
         <Layout>
+            <h1 className={css_helpers.SEO_header}>Kacper Ozieblowski</h1>
+            <h1 className={css_helpers.SEO_header}>Sorbonne University</h1>
+
             <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
 
                 <div>
-                    <img src="/me.jpg"></img>
+                    <img src="/me.jpg" alt="photo of Kacper Ozieblowski"></img>
                     <div>Figure 1.1 : My stupid face.</div>
                     <style jsx>{`
                         img{

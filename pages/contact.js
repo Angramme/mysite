@@ -14,9 +14,14 @@ export default function Contact(){
         <Head>
             <title>Contact</title>
             <link rel="icon" href="/profile-trans.png"/>
+            <meta name="description" content="email: Kacper.Ozieblowski@etu.sorbonne-universite.fr"/>
         </Head>
         <AnimatedBackground/>
         <Layout>
+            <h1 className={css_helpers.SEO_header}>Kacper Ozieblowski</h1>
+            <h1 className={css_helpers.SEO_header}>Sorbonne University</h1>
+            <h1 className={css_helpers.SEO_header}>Contact</h1>
+
             <MenuBar></MenuBar>
             <Block title="Contact" style={{textIndent:0, padding:"2rem", wordBreak:"break-word"}}>
                 You can contact me by:
