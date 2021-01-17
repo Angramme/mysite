@@ -9,6 +9,7 @@ import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {atomDark as dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import styles from "../../styles/project.module.sass"
+import css_helpers from "../../styles/organisation"
 
 import {IconContext} from "react-icons"
 import {CgSoftwareDownload as CgRelease, CgDanger, CgPlayButtonO, CgArrowTopLeftR as Arrow} from "react-icons/cg"

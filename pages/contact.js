@@ -5,6 +5,8 @@ import Block from "../components/block"
 import Head from "next/head"
 import AnimatedBackground from "../components/AnimatedBackground"
 
+import css_helpers from "../../styles/organisation"
+
 import { IconContext } from 'react-icons'
 import {FaGithub, FaReddit} from "react-icons/fa"
 import {CgMail} from "react-icons/cg"
