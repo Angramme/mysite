@@ -9,6 +9,7 @@ import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {atomDark as dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import styles from "../../styles/project.module.sass"
+import css_helpers from "../../styles/organisation.module.sass"
 
 import {IconContext} from "react-icons"
 import {CgSoftwareDownload as CgRelease, CgDanger, CgPlayButtonO, CgArrowTopLeftR as Arrow} from "react-icons/cg"
@@ -59,7 +60,13 @@ export default function Project({project}){
         <Head>
             <title>{project.name}</title>
             <link rel="icon" href="/profile-trans.png"/>
+            <meta name="description" content={project.description}/>
         </Head>
+
+        <h1 className={css_helpers.SEO_header}>Kacper Ozieblowski</h1>
+        <h1 className={css_helpers.SEO_header}>Sorbonne University</h1>
+        <h1 className={css_helpers.SEO_header}>{project.name}</h1>
+
         <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
             <Block className={styles.banner} style={{backgroundImage:`url(${project.img})`}}>
                 <h1 className={styles.title}>{project.name}</h1>

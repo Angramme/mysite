@@ -30,7 +30,13 @@ export default function Projects({projects}){
         <Head>
             <title>About</title>
             <link rel="icon" href="profile-trans.png"/>
+            <meta name="description" content="See my projects! I'm Kacper Ozieblowski, a first year student of CS and Math at Sorbonne University, Jussieu Campus..."/>
         </Head>
+
+        <h1 className={css_helpers.SEO_header}>Kacper Ozieblowski</h1>
+        <h1 className={css_helpers.SEO_header}>Sorbonne University</h1>
+        <h1 className={css_helpers.SEO_header}>Projects</h1>
+
         <Menubar></Menubar>
         <AnimBackground></AnimBackground>
         <Layout>
