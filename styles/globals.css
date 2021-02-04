@@ -6,9 +6,8 @@
 html,
 body {
   /* background-color: rgb(38, 40, 44); */
-  background: linear-gradient(90deg, rgb(24, 24, 26), rgb(43, 47, 53));
-  color: rgb(192, 181, 178);
   overflow-x: hidden;
+  color: red;
 
   padding: 0;
   margin: 0;
@@ -20,10 +19,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-b {
-  color: rgb(209, 199, 180)
 }
 
 * {

@@ -2,10 +2,11 @@
 @import "../styles/CSS3_mixins.scss"
 
 .project
+    color: $text-color
     border: solid 0.1px $border-color
     background: $frosted-glass-opaque
     // backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
-    +border-radius($border-radius)
+    border-radius: $border-radius
     // padding: 1rem
     // text-indent: 1.5rem
     padding: 0
@@ -15,9 +16,16 @@
 
     margin-bottom: 4rem
     display: flex
+
     &:hover
         border-color: $selected-color
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25)
+    &._dark
+        color: $dk-text-color
+        border-color: $dk-border-color
+        background: $dk-frosted-glass-opaque
+    &._dark:hover
+        border-color: $dk-selected-color
     @media #{$is-a-phone}
         flex-direction: column
         backdrop-filter: none
@@ -26,13 +34,15 @@
 .left
     position: relative
     padding: 1rem
-    background: rgba(13, 13, 14, 0.767)
+    background: $secondary
     font-size: 1.7vh
     
     width: 20%
     // max-height: 35vh
     flex-grow: 0
     flex-shrink: 0
+    &._dark
+        background: $dk-secondary
     @media #{$is-a-phone}
         width: unset
 
@@ -56,7 +66,9 @@
     max-height: 20vh
 
 .little_desc
-    color: gray
+    color: #494a4e
+    &._dark
+        color: gray
 
 .language
     margin: 0.8rem 0

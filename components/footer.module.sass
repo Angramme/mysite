@@ -12,10 +12,15 @@
 
     padding-top: 4rem
     padding-bottom: 2rem
-    background: #181a1b
+    background: $secondary
     border-top: solid 1px $border-color
+    color: $text-color
 
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)
+    &._dark
+        background: $dk-secondary
+        color: $dk-text-color
+        border-top-color: $dk-border-color
     @media #{$is-a-phone}
         padding: 4rem
 
