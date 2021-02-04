@@ -14,6 +14,7 @@ export default function AnimBackground(){
             right:0,
             width:"100vw",
             height:"100vh",
+            zIndex: 1,
         }
     }></Canvas>
 }

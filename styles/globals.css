@@ -27,7 +27,7 @@ b {
 }
 
 * {
-  z-index: inherit;
+  /*z-index: inherit;*/
   box-sizing: border-box;
 }
 
