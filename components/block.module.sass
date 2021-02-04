@@ -12,18 +12,26 @@
     margin-left: 0.6rem
     margin-bottom: 0.5rem
     // font-family: Medieval
+    color: $text-color
+    &._dark
+        color: $dk-text-color
 
 .block
     // font-family: 'Quicksand', sans-serif
     line-height: 1.2em
 
+    color: $text-color
     border: solid 0.1px $border-color
     background: $frosted-glass-opaque
     // backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
-    +border-radius($border-radius)
+    border-radius: $border-radius
     padding: 1rem
     text-indent: 1.5rem
+    &._dark
+        color: $dk-text-color
+        border-color: $dk-border-color
+        background: $dk-frosted-glass-opaque
     @media #{$is-a-phone}
         backdrop-filter: none
         background: $frosted-glass-opaque

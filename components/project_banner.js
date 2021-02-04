@@ -1,4 +1,6 @@
-import styles from "./project_banner.module.sass"
+import styles_raw from "./project_banner.module.sass"
+import {themify} from "../lib/darkify"
+
 import sentences from "../lib/helpers/sentences"
 
 import Link from "next/link"
@@ -13,8 +15,6 @@ import {FaGithub} from "react-icons/fa"
 
 
 
-
-
 const MAX_DESC_LEN = 5;
 function regexIndexOf(str, regex, startpos) {
     var indexOf = str.substring(startpos || 0).search(regex);
@@ -23,14 +23,15 @@ function regexIndexOf(str, regex, startpos) {
 function firstNlines(str, N){
     return str.substring(0, N*60);
 }
-const md_renderers = {
+const md_renderers = styles=>({
     // text: ({value})=><div>{value}</div>
     image: ({alt})=><i>[{alt}]</i>,
     heading: ({children})=><h3>{children}</h3>,
     link: ({children, href})=><a href={href} target="_blank" className={styles.md_link}>{children}</a>,
-}
+})
 
-export default function Project({project}){  
+export default function Project({project}){
+    const styles = themify(styles_raw);
 
     const proj_page = "/p/"+project.name;
     const no_desc = project.readme_md.length == 0 || project.image_only;
@@ -61,7 +62,7 @@ export default function Project({project}){
                     <div className={styles.desc_cutoff}>
                         <ReactMarkdown 
                             children={firstNlines(project.readme_md, MAX_DESC_LEN)+"..."} 
-                            renderers={md_renderers}
+                            renderers={md_renderers(styles)}
                             className={styles.markdown}>
                         </ReactMarkdown>
                     </div>

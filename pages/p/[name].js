@@ -8,7 +8,8 @@ import Head from "next/head"
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {atomDark as dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
-import styles from "../../styles/project.module.sass"
+import styles_raw from "../../styles/project.module.sass"
+import { themify } from "../../lib/darkify"
 import css_helpers from "../../styles/organisation.module.sass"
 
 import {IconContext} from "react-icons"
@@ -40,7 +41,7 @@ export async function getStaticPaths(){
     }
 }
 
-const md_renderers = {
+const md_renderers = styles=>({
     // text: ({value})=><div>{value}</div>
     image: ({alt, src})=><div className={styles.md_image}>
         <a href={src} target="_blank">
@@ -51,9 +52,10 @@ const md_renderers = {
     heading: ({children})=><h1 className={styles.md_heading}>{children}</h1>,
     link: ({children, href})=><a href={href} target="_blank" className={styles.md_link}>{children}</a>,
     code: ({language, value}) => <SyntaxHighlighter style={dark} language={language} children={value} />,
-}
+})
 
 export default function Project({project}){
+    const styles = themify(styles_raw);
     return <>
     <AnimatedBackground></AnimatedBackground>
     <Layout>
@@ -80,7 +82,7 @@ export default function Project({project}){
                 <ReactMarkdown 
                     className={styles.md}
                     children={project.readme_md}
-                    renderers={md_renderers}
+                    renderers={md_renderers(styles)}
                     ></ReactMarkdown>
                 {project.readme_md.length==0?
                     <div className={styles.no_readme}>

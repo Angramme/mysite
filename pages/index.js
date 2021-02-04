@@ -11,11 +11,15 @@ import AnimBackground from "../components/AnimatedBackground"
 import { IconContext } from 'react-icons'
 import {CgWebsite as Arrow} from "react-icons/cg"
 
-import styles from "../styles/index.module.sass"
+import styles_raw from "../styles/index.module.sass"
+import { themify } from '../lib/darkify'
 
 import css_helpers from "../styles/organisation.module.sass"
+import { Children } from 'react'
 
 export default function  Home(){
+    const styles = themify(styles_raw);
+    const B = ({children})=>(<span className={styles.bold}>{children}</span>);
     return (
         <>
         <Head>
@@ -33,36 +37,25 @@ export default function  Home(){
             <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
 
                 <div>
-                    <img src="/me.jpg" alt="photo of Kacper Ozieblowski"></img>
-                    <div>Figure 1.1 : My stupid face.</div>
-                    <style jsx>{`
-                        img{
-                            border-radius: 0.6rem;
-                            margin-top: 2rem;
-                            margin: 1rem;
-                        }
-                        div{
-                            text-align:center;
-                            font-size:1.8vh;
-                        }
-                    `}</style>
+                    <img className={styles.image} src="/me.jpg" alt="photo of Kacper Ozieblowski"></img>
+                    <div className={styles.image_legend}>Figure 1.1 : My stupid face.</div>
                 </div>
                 <Block title="About me">
                     {/* {random_sentences(50)} */}
-                    Hi! I'm Kacper Ozieblowski, a first year student of CS and Math at <b>Sorbonne University</b>, Jussieu Campus. 
+                    Hi! I'm Kacper Ozieblowski, a first year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
                     I first stared programming by myself in 2016 at the age of 14. It became my passion ever since.
-                    I speak 3 languages fluently, <b>English, French, Polish</b>.
+                    I speak 3 languages fluently, <B>English, French, Polish</B>.
                     I also occasionally play piano, paint, draw, all that stuff that makes my time schedule seem
                     balanced, and "legally" permits me to call myself a musician and an artist.
                 </Block>
             </div>
             <Block title="Competences">
                 <p>
-                    I have experience with several progamming languages which include primarly <b>JS</b>, <b>Node.js</b>, 
-                    <b>Python</b>, <b>C++</b>, <b>Haskell</b>, 
-                    <b>C</b>, <b>GLSL</b>, <b>Processing</b>, <b>CSS</b> (<b>SASS</b>, <b>SCSS</b>) and <b>HTML</b>. 
-                    I also have pretty limited knowledge of <b>Java</b>, <b>Rust</b>, <b>Lua</b>, <b>SQL</b>, <b>MongoDB</b>, and others.
-                    In the next year at the uni, I will also learn <b>OCaml</b>.
+                    I have experience with several progamming languages which include primarly <B>JS</B>, <B>Node.js</B>, 
+                    <B>Python</B>, <B>C++</B>, <B>Haskell</B>, 
+                    <B>C</B>, <B>GLSL</B>, <B>Processing</B>, <B>CSS</B> (<B>SASS</B>, <B>SCSS</B>) and <B>HTML</B>. 
+                    I also have pretty limited knowledge of <B>Java</B>, <B>Rust</B>, <B>Lua</B>, <B>SQL</B>, <B>MongoDB</B>, and others.
+                    In the next year at the uni, I will also learn <B>OCaml</B>.
                 </p>
                 <p>
                     I have some experience with various libraries: <br/>

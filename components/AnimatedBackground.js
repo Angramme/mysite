@@ -3,9 +3,11 @@ import Canvas from "../components/canvas"
 import {clientside_check as is_mobile} from "../lib/is_mobile"
 
 import lava from "../lib/animated_backgrounds/lava.js"
+import { useDarkMode } from "next-dark-mode"
 
 export default function AnimBackground(){
-    return <Canvas script={hook} style={
+    const darkmode = useDarkMode().darkModeActive;
+    return <Canvas args={{darkmode}} script={hook} style={
         {
             position:"fixed",
             top:0,
@@ -15,11 +17,14 @@ export default function AnimBackground(){
             width:"100vw",
             height:"100vh",
             zIndex: 1,
+            background: darkmode ?
+                "linear-gradient(90deg, rgb(24, 24, 26), rgb(43, 47, 53))" : 
+                "linear-gradient(90deg, rgb(205 205 205), rgb(218 219 226))",
         }
     }></Canvas>
 }
 
-function hook(can){
+function hook(can, {darkmode}){
     const isPhone = is_mobile();
 
     const bCan = document.createElement("canvas");
@@ -46,11 +51,12 @@ function hook(can){
 
     const redraw_background = ()=>{
         bC.clearRect(0, 0, bCan.width, bCan.height);
+        let wid = darkmode ? .8 : 1.5;
         for(let i=0; i<200; i++){
             bC.fillStyle = ["yellow", "red", "blue", "white"][Math.random()*4|0];
             let x = Math.random()*bCan.width|0;
             let y = Math.random()*bCan.height|0;
-            bC.fillRect(x, y, .8, 2+Math.random()*1.5);
+            bC.fillRect(x, y, wid, 2+Math.random()*1.5);
         }
     }
 
