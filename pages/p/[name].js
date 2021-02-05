@@ -5,6 +5,8 @@ import Footer from "../../components/footer"
 import Link from "next/link"
 import Head from "next/head"
 
+import DarkMode from "../../components/darkmode_button"
+
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {atomDark as dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
@@ -93,5 +95,6 @@ export default function Project({project}){
         </IconContext.Provider>
     </Layout>
     <Footer></Footer>
+    <DarkMode className={styles.darkmode_btn}/>
     </>
 }
