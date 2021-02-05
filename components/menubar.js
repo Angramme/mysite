@@ -1,8 +1,7 @@
 import styles_raw from "./menubar.module.sass"
 import {themify} from "../lib/darkify"
 import Link from "next/link"
-
-import {CgDarkMode, CgSun, CgMoon} from "react-icons/cg"
+import DarkMode from "./darkmode_button"
 
 import {useRef, useEffect} from "react"
 import { useDarkMode } from "next-dark-mode"
@@ -76,20 +75,6 @@ export default function MenuBar() {
                     </div>
                 })}
             </div>
-            <div className={styles.dark_mode_switch} onClick={()=>{
-                let dm = darkmode;
-                if(dm.autoModeActive)
-                    dm.switchToDarkMode();
-                else if(dm.darkModeActive)
-                    dm.switchToLightMode();
-                else
-                    dm.switchToAutoMode();
-                document.location.reload(true);
-            }}>{(()=>{
-                let dm = darkmode;
-                if(dm.autoModeActive) return <CgDarkMode/>
-                if(dm.darkModeActive) return <CgMoon/>
-                if(!dm.darkModeActive) return <CgSun/>
-            })()}</div>
+            <DarkMode className={styles.dark_mode_switch}/>
         </div>
 }
