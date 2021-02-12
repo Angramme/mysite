@@ -13,3 +13,5 @@ User-agent: *
 Allow: /*
 Allow: /p/*
 Disallow: /api/*
+Allow: /api/sitemap
+Allow: /api/sitemap-projects
