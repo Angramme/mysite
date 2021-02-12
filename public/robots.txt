@@ -1,0 +1,8 @@
+Sitemap: https://domain.com/api/sitemap
+Sitemap: https://domain.com/api/sitemap-projects
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: *
+Disallow: /api/*
