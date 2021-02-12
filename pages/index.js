@@ -36,7 +36,7 @@ export default function  Home(){
 
             <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
 
-                <div>
+                <div className={styles.image_parent}>
                     <img className={styles.image} src="/me.jpg" alt="photo of Kacper Ozieblowski"></img>
                     <div className={styles.image_legend}>Figure 1.1 : My stupid face.</div>
                 </div>
