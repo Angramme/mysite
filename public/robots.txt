@@ -1,8 +1,13 @@
-Sitemap: https://domain.com/api/sitemap
-Sitemap: https://domain.com/api/sitemap-projects
+Sitemap: https://ozi.vercel.app/api/sitemap
+Sitemap: https://ozi.vercel.app/api/sitemap-projects
 
 User-agent: Googlebot-Image
-Disallow: /
+Disallow: /*.jpg
+Disallow: /*.jpeg
+Disallow: /*.png
+Disallow: /*.ttf
+Disallow: /*.ico
+Disallow: /*.svg
 
 User-agent: *
 Allow: /*
