@@ -1,8 +1,10 @@
 Sitemap: https://domain.com/api/sitemap
 Sitemap: https://domain.com/api/sitemap-projects
 
-User-agent: Googlebot
+User-agent: Googlebot-Image
 Disallow: /
 
 User-agent: *
+Allow: /*
+Allow: /p/*
 Disallow: /api/*
