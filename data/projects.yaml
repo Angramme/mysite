@@ -11,29 +11,29 @@ imgtoascii:
   hide: true
 
 dire:
-  img: "terminal.jpg"
+  img: "terminal.webp"
 
 GrLang:
   # img: "grlang2.png"
-  img: terminal.jpg
+  img: terminal.webp
 
 aids_projet_si:
   alias: anti-intrusion-detection-system
-  img: aids_cam.png
+  img: aids_cam.webp
   image_only: true
 
 polyrhythm:
-  img: "polyrhythm.png"
+  img: "polyrhythm.webp"
   live: https://angramme.github.io/polyrhythm/
 polyrhythm-v1:
   hide: true
   alias: polyrhythm alpha
-  img: "polyrhythm.png"
+  img: "polyrhythm.webp"
   live: https://angramme.github.io/polyrhythm-v1/
 
 simple-L-system-tree:
   alias: L Tree
-  img: L-tree.png
+  img: L-tree.webp
 
 TreeGenerator:
   alias: Tree Generator
@@ -41,16 +41,16 @@ TreeGenerator:
 
 mudi:
   image_only: true
-  img: mudi.png
+  img: mudi.webp
   live: https://angramme.github.io/mudi/
 
 new-year-fireworks:
   alias: fireworks
   live: https://angramme.github.io/new-year-fireworks/
-  img: newyear.png
+  img: newyear.webp
   image_only: true
 
 bad-tetris:
   live: https://angramme.github.io/bad-tetris/
   alias: bad tetris
-  img: tetris.png
+  img: tetris.webp
