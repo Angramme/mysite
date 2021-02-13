@@ -8,6 +8,8 @@ Disallow: /*.png
 Disallow: /*.ttf
 Disallow: /*.ico
 Disallow: /*.svg
+Disallow: /*.webp
+Disallow: /*.pdf
 
 User-agent: *
 Allow: /*
