@@ -8,4 +8,11 @@ module.exports = {
     });
     return config;
   },
+  images: {
+    domains: [
+      "github.com",
+      "githubusercontent.com",
+      "raw.githubusercontent.com",
+    ]
+  },
 };

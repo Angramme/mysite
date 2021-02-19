@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from "next/link"
+import Image from "next/image"
 import Menubar from "../components/menubar"
 import Layout from "../components/layout"
 import Block from "../components/block"
@@ -15,7 +16,6 @@ import styles_raw from "../styles/index.module.sass"
 import { themify } from '../lib/darkify'
 
 import css_helpers from "../styles/organisation.module.sass"
-import { Children } from 'react'
 
 export default function  Home(){
     const styles = themify(styles_raw);
@@ -37,7 +37,10 @@ export default function  Home(){
             <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
 
                 <div className={styles.image_parent}>
-                    <img className={styles.image} src="/me.jpg" alt="photo of Kacper Ozieblowski"></img>
+                    {/* <img className={styles.image} src="/me.jpg" alt="photo of Kacper Ozieblowski"></img> */}
+                    <div className={styles.image}>
+                        <Image layout="fill" src="/me.jpg" alt="photo of Kacper Ozieblowski"></Image>
+                    </div>
                     <div className={styles.image_legend}>Figure 1.1 : My stupid face.</div>
                 </div>
                 <Block title="About me">

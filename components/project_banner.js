@@ -1,9 +1,8 @@
 import styles_raw from "./project_banner.module.sass"
 import {themify} from "../lib/darkify"
 
-import sentences from "../lib/helpers/sentences"
-
 import Link from "next/link"
+import Image from "next/image"
 import ReactMarkdown from 'react-markdown'
 
 import {IconContext} from "react-icons"
@@ -54,23 +53,21 @@ export default function Project({project}){
             </div>
             <div className={styles.right}>
                 <div className={no_desc ? styles.img_container_full : styles.img_container}>
-                    <img className={styles.img} 
-                        src={project.img} alt="banner image"></img>
+                    <Image layout="fill" className={styles.img} src={project.img} alt={`banner image of project ${project.name}`}/>
                 </div>
-                {no_desc ? "" : 
-                <div className={styles.desc}>
-                    <div className={styles.desc_cutoff}>
+                {no_desc ? "" : <>
+                    <div className={styles.desc}>
                         <ReactMarkdown 
                             children={firstNlines(project.readme_md, MAX_DESC_LEN)+"..."} 
                             renderers={md_renderers(styles)}
                             className={styles.markdown}>
                         </ReactMarkdown>
+                        <div className={styles.desc_cutoff}></div>
                     </div>
-
                     <Link href={proj_page}>
                         <div className={styles.readMore}> <CgDetailsMore/> read more</div>
                     </Link>
-                </div>}
+                </>}
             </div>
         </div>
     </IconContext.Provider>

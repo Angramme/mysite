@@ -1,10 +1,10 @@
 import styles_raw from "./menubar.module.sass"
 import {themify} from "../lib/darkify"
 import Link from "next/link"
+import Image from "next/image"
 import DarkMode from "./darkmode_button"
 
 import {useRef, useEffect} from "react"
-import { useDarkMode } from "next-dark-mode"
 
 
 export default function MenuBar() {
@@ -50,13 +50,14 @@ export default function MenuBar() {
         };
     })
 
-    const darkmode = useDarkMode();
-
     return <div className={styles.bar} ref={bar_ref}>
             <Link href="/">
                 <div className={styles.header}>
-                    <img className={styles.profile_pic} src="/profile-trans.png"></img>
-                    Ozieblowski Kacper
+                    {/* <img className={styles.profile_pic} src="/profile-trans.png"></img> */}
+                    <div className={styles.profile_pic}>
+                        <Image layout="fill" src="/profile-trans.png"></Image>
+                    </div>
+                    <div className={styles.header_text}>Ozieblowski Kacper</div>
                 </div>
             </Link>
             <div className={styles.btns}>

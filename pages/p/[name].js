@@ -4,6 +4,7 @@ import AnimatedBackground from "../../components/AnimatedBackground"
 import Footer from "../../components/footer"
 import Link from "next/link"
 import Head from "next/head"
+import Image from "next/image"
 
 import DarkMode from "../../components/darkmode_button"
 
@@ -46,9 +47,11 @@ export async function getStaticPaths(){
 const md_renderers = styles=>({
     // text: ({value})=><div>{value}</div>
     image: ({alt, src})=><div className={styles.md_image}>
-        <a href={src} target="_blank">
-            <img src={src} alt={alt}></img>
-        </a>
+        {/* <a href={src} target="_blank"> */}
+            <div className={styles.md_image_image_container}>
+                <Image onClick={()=>window.open(src, '_blank')} layout="fill" src={src} alt={alt}/>
+            </div>
+        {/* </a> */}
         <div className={styles.md_img_desc}>{alt.trim()}</div>
     </div>,
     heading: ({children})=><h1 className={styles.md_heading}>{children}</h1>,
@@ -72,7 +75,11 @@ export default function Project({project}){
         <h1 className={css_helpers.SEO_header}>{project.name}</h1>
 
         <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
-            <Block className={styles.banner} style={{backgroundImage:`url(${project.img})`}}>
+            {/* <Block className={styles.banner} style={{backgroundImage:`url(${project.img})`}}> */}
+            <Block className={styles.banner}>
+                <div className={styles.banner_image}>
+                    <Image layout="fill" src={project.img}></Image>
+                </div>
                 <h1 className={styles.title}>{project.name}</h1>
                 <div className={styles.options}>
                     {!project.live ? "" : <a href={project.live} target="_blank"><div><CgPlayButtonO/> Live Demo</div></a>}
