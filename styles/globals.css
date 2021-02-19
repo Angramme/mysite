@@ -5,6 +5,7 @@
 
 html,
 body {
+  font-size: 2vh;
   /* background-color: rgb(38, 40, 44); */
   overflow-x: hidden;
   /* color: red; */

@@ -1,7 +1,10 @@
 @import "../styles/global_vars.sass"
 @import "../styles/CSS3_mixins.scss"
- 
+
+$switch-layout: "(max-aspect-ratio: 6/5)"
+
 .bar
+    font-size: 2.5vh
     position: relative
     z-index: 100
     background: $frosted-glass
@@ -18,25 +21,30 @@
         color: $dk-text-color
         background: $dk-frosted-glass
         border-bottom-color: $dk-border-color
-    @media #{$is-a-phone}
+    @media #{$switch-layout}
         padding: 0.5rem
         padding-top: 1rem
     
 
 .profile_pic
+    display: inline-block
     height: 2.2rem
+    width: 2.2rem
     position: relative
     bottom: 0.3rem
     right: 0.6rem
     
     text-align: center
     vertical-align: middle
-    @media #{$is-a-phone}
+    & *
+        object-fit: contain
+    @media #{$switch-layout}
         // height: 2rem
         display: none
 
+.header_text
+    display: inline
 .header
-    font-size: 2.5vh
     font-weight: bold
     margin: 0 0 0 3rem
     display: inline
@@ -49,8 +57,7 @@
         filter: blur(1px)
     &._dark:hover
         color: $dk-selected-color
-    @media #{$is-a-phone}
-        font-size: 2.5vh
+    @media #{$switch-layout}
         margin: 0
         text-align: center
         display: block
@@ -60,7 +67,7 @@
 .btns
     margin-left: 5rem
     display: inline
-    @media #{$is-a-phone}
+    @media #{$switch-layout}
         margin: 0
         display: block
         text-align: center
@@ -97,7 +104,7 @@
     position: absolute
     right: 2rem
     top: 2rem
-    @media #{$is-a-phone}
+    @media #{$switch-layout}
         font-size: 1.7vh
         top: .1rem
         right: .1rem
