@@ -41,24 +41,26 @@ export default function  Home(){
                     <div className={styles.image}>
                         <Image layout="fill" src="/me.jpg" alt="photo of Kacper Ozieblowski"></Image>
                     </div>
-                    <div className={styles.image_legend}>Figure 1.1 : My stupid face.</div>
+                    {/* <div className={styles.image_legend}>Figure 1: Me.</div> */}
                 </div>
-                <Block title="About me">
-                    {/* {random_sentences(50)} */}
-                    Hi! I'm Kacper Ozieblowski, a first year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
-                    I first stared programming by myself in 2016 at the age of 14. It became my passion ever since.
-                    I speak 3 languages fluently, <B>English, French, Polish</B>.
-                    I also occasionally play piano, paint, draw, all that stuff that makes my time schedule seem
-                    balanced, and "legally" permits me to call myself a musician and an artist.
-                </Block>
+                <div>   
+                    <div style={{marginTop: "3rem"}}></div>
+                    <Block title="About me">
+                        {/* {random_sentences(50)} */}
+                        Hi! I'm Kacper Ozieblowski, a first year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
+                        I'm a passionate of programing which I discovered at the age of 14.
+                        It became my hobby ever since.
+                        I speak 3 languages fluently, <B>English, French</B> and <B>Polish</B>.
+                        I also occasionally play piano, paint, draw, because it makes my time schedule seem
+                        balanced. 
+                    </Block>
+                </div>
             </div>
             <Block title="Competences">
                 <p>
-                    I have experience with several progamming languages which include primarly <B>JS</B>, <B>Node.js</B>, 
-                    <B>Python</B>, <B>C++</B>, <B>Haskell</B>, 
-                    <B>C</B>, <B>GLSL</B>, <B>Processing</B>, <B>CSS</B> (<B>SASS</B>, <B>SCSS</B>) and <B>HTML</B>. 
-                    I also have pretty limited knowledge of <B>Java</B>, <B>Rust</B>, <B>Lua</B>, <B>SQL</B>, <B>MongoDB</B>, and others.
-                    In the next year at the uni, I will also learn <B>OCaml</B>.
+                    I have experience with several progamming languages which include primarly <B>JS</B>, <B>Node.js</B>, <B>Python</B>, <B>C++</B>, <B>Haskell</B>, <B>C</B>, <B>GLSL</B>, <B>Processing</B>, <B>CSS</B> (<B>SASS</B>, <B>SCSS</B>) and <B>HTML</B>. 
+                    I also have a limited knowledge of <B>Java</B>, <B>Rust</B>, <B>Lua</B>, <B>SQL</B>, <B>MongoDB</B>, and others.
+                    I also plan to learn <B>OCaml</B> next year.
                 </p>
                 <p>
                     I have some experience with various libraries: <br/>
