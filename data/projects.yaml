@@ -3,6 +3,7 @@ ___pinned:
   - polyrhythm
   - GrLang
   - TreeGenerator
+  - menger_glsl
   - raytracer
   - mudi
   - steganograph
@@ -55,3 +56,6 @@ bad-tetris:
   live: https://angramme.github.io/bad-tetris/
   alias: bad tetris
   img: tetris.webp
+
+menger_glsl:
+  alias: Menger Sponge in Real-time
