@@ -2,8 +2,8 @@
 ___pinned:
   - polyrhythm
   - GrLang
+  - fractal_viewer
   - TreeGenerator
-  - menger_glsl
   - raytracer
   - mudi
   - steganograph
@@ -57,5 +57,5 @@ bad-tetris:
   alias: bad tetris
   img: tetris.webp
 
-menger_glsl:
-  alias: Menger Sponge in Real-time
+fractal_viewer:
+  alias: Realtime Fractal Renderer
