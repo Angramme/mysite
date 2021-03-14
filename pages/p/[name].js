@@ -47,11 +47,9 @@ export async function getStaticPaths(){
 const md_renderers = styles=>({
     // text: ({value})=><div>{value}</div>
     image: ({alt, src})=><div className={styles.md_image}>
-        {/* <a href={src} target="_blank"> */}
-            <div className={styles.md_image_image_container}>
-                <Image onClick={()=>window.open(src, '_blank')} layout="fill" src={src} alt={alt}/>
-            </div>
-        {/* </a> */}
+        <a href={src} target="_blank">
+            <img className={styles.md_image_image} src={src}></img>
+        </a>
         <div className={styles.md_img_desc}>{alt.trim()}</div>
     </div>,
     heading: ({children})=><h1 className={styles.md_heading}>{children}</h1>,
