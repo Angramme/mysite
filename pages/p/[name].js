@@ -20,6 +20,7 @@ import {CgSoftwareDownload as CgRelease, CgDanger, CgPlayButtonO, CgArrowTopLeft
 import {FaGithub} from "react-icons/fa"
 
 import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 
 import {get_repo, GITHUB_RATE_LIMIT, get_repos} from "../../lib/repos"
 
@@ -47,11 +48,9 @@ export async function getStaticPaths(){
 const md_renderers = styles=>({
     // text: ({value})=><div>{value}</div>
     image: ({alt, src})=><div className={styles.md_image}>
-        {/* <a href={src} target="_blank"> */}
-            <div className={styles.md_image_image_container}>
-                <Image onClick={()=>window.open(src, '_blank')} layout="fill" src={src} alt={alt}/>
-            </div>
-        {/* </a> */}
+        <a href={src} target="_blank">
+            <img className={styles.md_image_image} src={src}></img>
+        </a>
         <div className={styles.md_img_desc}>{alt.trim()}</div>
     </div>,
     heading: ({children})=><h1 className={styles.md_heading}>{children}</h1>,
@@ -92,6 +91,7 @@ export default function Project({project}){
                     className={styles.md}
                     children={project.readme_md}
                     renderers={md_renderers(styles)}
+                    plugins={[gfm]}
                     ></ReactMarkdown>
                 {project.readme_md.length==0?
                     <div className={styles.no_readme}>
