@@ -54,6 +54,32 @@ $accent-color: rgb(89, 114, 255)
     margin: 1.5rem
     text-indent: 0
 
+
+.md
+    & th
+        color: $accent-color
+        padding: .5rem
+    & table
+        margin: auto
+        border:none
+        border-collapse: collapse
+        margin-bottom: 2rem
+        // background: $dk-frosted-glass
+    & td
+        padding: .2rem 1.2rem
+        border-left: dashed 1px $border-color
+        border-right: dashed 1px $border-color
+        &._dark
+            border-left: dashed 1px $dk-border-color
+            border-right: dashed 1px $dk-border-color
+
+    & td:first-child
+        padding-left: none
+        border-left: none
+    & td:last-child
+        border-right: none
+
+
 .md_heading
     text-indent: 0
     // text-decoration: underline wavy

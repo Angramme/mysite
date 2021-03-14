@@ -20,6 +20,7 @@ import {CgSoftwareDownload as CgRelease, CgDanger, CgPlayButtonO, CgArrowTopLeft
 import {FaGithub} from "react-icons/fa"
 
 import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 
 import {get_repo, GITHUB_RATE_LIMIT, get_repos} from "../../lib/repos"
 
@@ -90,6 +91,7 @@ export default function Project({project}){
                     className={styles.md}
                     children={project.readme_md}
                     renderers={md_renderers(styles)}
+                    plugins={[gfm]}
                     ></ReactMarkdown>
                 {project.readme_md.length==0?
                     <div className={styles.no_readme}>

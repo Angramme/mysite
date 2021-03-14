@@ -20,6 +20,7 @@
     "react-markdown": "^5.0.3",
     "react-syntax-highlighter": "^15.4.3",
     "react-tooltip": "^4.2.13",
+    "remark-gfm": "^1.0.0",
     "sass": "^1.29.0",
     "seed-random": "^2.2.0",
     "sitemap": "^6.3.6"
