@@ -92,11 +92,11 @@ export default function  Home(){
                     <div>
                         In C++:
                         <ul>
-                            <li>A chunk of STL</li>
+                            <li>A chunk of STL and STD</li>
                             <li>OpenCV</li>
                             <li>LLVM</li>
                             <li>SFML</li>
-                            <li>Boost included in STL</li>
+                            <li>Boost included in STD</li>
                         </ul>
                     </div>
                 </div>
