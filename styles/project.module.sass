@@ -29,7 +29,7 @@ $accent-color: rgb(89, 114, 255)
 .options
     text-align: right
     margin-top: 1.5rem
-    font-size: 2vh
+    font-size: 1rem
     & div
         background: rgba(0, 0, 0, 0.5)
         display: inline
@@ -41,18 +41,24 @@ $accent-color: rgb(89, 114, 255)
     position: fixed
     left: 2rem
     top: 2rem
-    font-size: 2.2vh
+    font-size: 1.1rem
     background: $frosted-glass
 
     cursor: pointer
     transition: color 0.2s
     &:hover
         color: $selected-color
+    @media #{$is-a-phone}
+        font-size: 1rem
+        top: 1rem
+        left: 0rem
 
 .md
-    font-size: 1.9vh
+    //font-size: 1.9vh
     margin: 1.5rem
     text-indent: 0
+    @media #{$is-a-phone}
+        margin: 0
 
 
 .md
@@ -84,7 +90,9 @@ $accent-color: rgb(89, 114, 255)
     text-indent: 0
     // text-decoration: underline wavy
     color: $accent-color
-    font-size: 3vh
+    font-size: 1.8rem
+    @media #{$is-a-phone}
+        margin-top: 3rem
 
 .md_link
     cursor: pointer
@@ -119,6 +127,9 @@ $accent-color: rgb(89, 114, 255)
 
 .darkmode_btn
     position: fixed
+    font-size: 1rem
     top: 2rem
     right: 2rem
     z-index: 10
+    @media #{$is-a-phone}
+        top: 1rem

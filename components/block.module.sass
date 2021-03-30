@@ -5,6 +5,8 @@
 
 .container
     margin: 1rem
+    @media #{$is-a-phone}
+        margin: 1.5rem 0
 
 .header
     // font-weight: bold
@@ -33,6 +35,11 @@
         border-color: $dk-border-color
         background: $dk-frosted-glass-opaque
     @media #{$is-a-phone}
-        backdrop-filter: none
-        background: $frosted-glass-opaque
+        text-indent: 0
+        padding: 1rem .7rem
+        border-radius: 0
+        border-left: none
+        border-right: none
+        // backdrop-filter: none
+        // background: $frosted-glass-opaque
         

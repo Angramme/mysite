@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.sass'
 import withDarkMode from 'next-dark-mode'
 
 function MyApp({ Component, pageProps }) {

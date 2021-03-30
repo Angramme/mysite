@@ -4,7 +4,7 @@
 $switch-layout: "(max-aspect-ratio: 6/5)"
 
 .bar
-    font-size: 2.5vh
+    font-size: 1.25rem
     position: relative
     z-index: 100
     background: $frosted-glass
@@ -80,7 +80,7 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
         
 
 .button
-    font-size: 2.2vh
+    font-size: 1.1rem
     display: inline
     // float: right
     padding: 0 1rem
@@ -99,6 +99,8 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     &._dark:hover
         color: $dk-selected-color
         border-color: $dk-border-color
+    @media #{$is-a-phone}
+        padding: 0 .5rem
 
 .dark_mode_switch
     position: absolute
