@@ -98,7 +98,7 @@ export default function Project({project}){
                         <CgDanger/> Sorry, this project doesn't have a readme
                     </div>:""}
             </Block>
-            <Link href="/projects"><div className={styles.back_btn}> <Arrow></Arrow> go back </div></Link>
+            <Link scroll={false} href="/projects"><div className={styles.back_btn}> <Arrow></Arrow> go back </div></Link>
         </IconContext.Provider>
     </Layout>
     <Footer></Footer>
