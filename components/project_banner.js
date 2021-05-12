@@ -32,7 +32,8 @@ const md_renderers = styles=>({
 export default function Project({project}){
     const styles = themify(styles_raw);
 
-    const proj_page = "/p/"+project.name;
+    const proj_page = "/p/["+project.name+"]";
+    const proj_page_as = "/p/"+project.name;
     const no_desc = project.readme_md.length == 0 || project.image_only;
     return <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
     <div className={styles.project}>
@@ -46,7 +47,7 @@ export default function Project({project}){
 
                 <div className={styles.options}>
                     {!project.live ? "" : <a href={project.live} target="_blank"><div><CgPlayButtonO/> Live Demo</div></a>}
-                    <Link href={proj_page}><div><CgReadme/> About</div></Link>
+                    <Link href={proj_page} as={proj_page_as}><div><CgReadme/> About</div></Link>
                     <a href={project.repo_page_url} target="_blank"><div><FaGithub/> GitHub</div></a>
                     {!project.latest_release ? "" : <a href={project.latest_release.html_url} target="_blank"><div><CgRelease/> {project.latest_release.tag_name}</div></a>}
                 </div>
@@ -64,7 +65,7 @@ export default function Project({project}){
                         </ReactMarkdown>
                         <div className={styles.desc_cutoff}></div>
                     </div>
-                    <Link href={proj_page}>
+                    <Link href={proj_page} as={proj_page_as}>
                         <div className={styles.readMore}> <CgDetailsMore/> read more</div>
                     </Link>
                 </>}

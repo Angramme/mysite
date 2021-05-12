@@ -2,7 +2,6 @@ import { useDarkMode } from "next-dark-mode"
 import { themify } from "../lib/darkify"
 import styles_raw from "./darkmode_button.module.sass"
 import {CgDarkMode, CgSun, CgMoon} from "react-icons/cg"
-import ReactTooltip from "react-tooltip"
 
 export default function DarkmodeButton({className}){
     const styles = themify(styles_raw);
@@ -23,10 +22,5 @@ export default function DarkmodeButton({className}){
             if(dm.darkModeActive) return <CgMoon data-tip="dark mode"/>
             if(!dm.darkModeActive) return <CgSun data-tip="light mode"/>
         })()}
-        <ReactTooltip 
-            place="left"
-            backgroundColor="gray"
-            color="white"
-            borderColor="white"/>
     </div>
 }
