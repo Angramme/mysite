@@ -15,10 +15,7 @@ import {FaGithub} from "react-icons/fa"
 
 
 const MAX_DESC_LEN = 5;
-function regexIndexOf(str, regex, startpos) {
-    var indexOf = str.substring(startpos || 0).search(regex);
-    return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
-}
+
 function firstNlines(str, N){
     return str.substring(0, N*60);
 }
@@ -54,7 +51,14 @@ export default function Project({project}){
             </div>
             <div className={styles.right}>
                 <div className={no_desc ? styles.img_container_full : styles.img_container}>
-                    <Image layout="fill" className={styles.img} src={project.img} alt={`banner image of project ${project.name}`}/>
+                    <Image 
+                        layout="fill" 
+                        className={styles.img} 
+                        src={project.img} 
+                        alt={`banner image of project ${project.name}`}
+                        quality={80}
+                        sizes="50vh"
+                        />
                 </div>
                 {no_desc ? "" : <>
                     <div className={styles.desc}>

@@ -40,7 +40,7 @@ export default function Projects({projects}){
         <Menubar></Menubar>
         <AnimBackground></AnimBackground>
         <Layout>
-            <h1 style={{fontSize:"8vh", margin:"1rem"}}>Projects:</h1>
+            {/* <h1 style={{fontSize:"6vh", marginLeft:"2rem", marginBottom:"3rem"}}>Projects</h1> */}
             {projects.map((e, i)=>{
                 return <Proj project={e} key={e.id}>
                 </Proj>
