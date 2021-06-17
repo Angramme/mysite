@@ -53,10 +53,13 @@ export default function MenuBar() {
     return <div className={styles.bar} ref={bar_ref}>
             <Link href="/">
                 <div className={styles.header}>
-                    {/* <img className={styles.profile_pic} src="/profile-trans.png"></img> */}
-                    <div className={styles.profile_pic}>
-                        <Image layout="fill" src="/profile-trans.png"></Image>
-                    </div>
+                    {/* <div className={styles.profile_pic}>
+                        <Image 
+                            layout="fill" 
+                            src="/profile-trans.png"
+                            sizes="10vh"
+                            />
+                    </div> */}
                     <div className={styles.header_text}>Ozieblowski Kacper</div>
                 </div>
             </Link>
