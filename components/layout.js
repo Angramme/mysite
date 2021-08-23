@@ -1,5 +1,5 @@
 import { themify } from "../lib/darkify"
-import styles_raw from "./layout.module.sass"
+import styles_raw from "../styles/layout.module.sass"
 import CookieConsent from "react-cookie-consent";
 
 export default function Layout({children, style}) {

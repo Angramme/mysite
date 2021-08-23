@@ -1,6 +1,6 @@
 import { useDarkMode } from "next-dark-mode"
 import { themify } from "../lib/darkify"
-import styles_raw from "./darkmode_button.module.sass"
+import styles_raw from "../styles/darkmode_button.module.sass"
 import {CgDarkMode, CgSun, CgMoon} from "react-icons/cg"
 import ReactTooltip from "react-tooltip"
 

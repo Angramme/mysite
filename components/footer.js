@@ -1,4 +1,4 @@
-import styles_raw from "./footer.module.sass"
+import styles_raw from "../styles/footer.module.sass"
 import {themify} from "../lib/darkify"
 
 export default function Footer(){

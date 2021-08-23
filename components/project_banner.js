@@ -1,4 +1,4 @@
-import styles_raw from "./project_banner.module.sass"
+import styles_raw from "../styles/project_banner.module.sass"
 import {themify} from "../lib/darkify"
 
 import Link from "next/link"
