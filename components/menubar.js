@@ -1,7 +1,7 @@
-import styles_raw from "./menubar.module.sass"
+import styles_raw from "../styles/menubar.module.sass"
 import {themify} from "../lib/darkify"
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 import DarkMode from "./darkmode_button"
 
 import {useRef, useEffect} from "react"

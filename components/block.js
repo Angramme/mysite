@@ -1,4 +1,4 @@
-import styles_raw from "./block.module.sass"
+import styles_raw from "../styles/block.module.sass"
 import {themify} from "../lib/darkify"
 
 export default function Block({children, title, className, style}){
