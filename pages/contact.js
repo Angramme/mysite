@@ -10,8 +10,10 @@ import css_helpers from "../styles/organisation.module.sass"
 import { IconContext } from 'react-icons'
 import {FaGithub, FaReddit} from "react-icons/fa"
 import {CgMail} from "react-icons/cg"
+import { themify } from "../lib/darkify"
 
 export default function Contact(){
+    const styles = themify(require('../styles/contact.module.sass'))
     return (<>
         <Head>
             <title>Contact</title>
@@ -29,7 +31,14 @@ export default function Contact(){
                 You can contact me by:
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
                     <ul>
-                        <li><CgMail/> email: Kacper.Ozieblowski@etu.sorbonne-universite.fr</li>
+                        <li><CgMail/> 
+                            {/* email: Kacper.Ozieblowski@etu.sorbonne-universite.fr */}
+                            <span className={styles.email1}></span>
+                            <span className={styles.email2}></span>
+                            <span className={styles.email3}></span>
+                            <span className={styles.email4}></span>
+                            <span className={styles.email5}></span>
+                        </li>
                         <li><FaGithub/> concerning a project write an issue
                             on one of my repos</li>
                         <li><FaReddit/> reddit: u/Angramme</li>
