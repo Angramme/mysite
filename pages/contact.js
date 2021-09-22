@@ -10,6 +10,7 @@ import css_helpers from "../styles/organisation.module.sass"
 import { IconContext } from 'react-icons'
 import {FaGithub, FaReddit} from "react-icons/fa"
 import {CgMail} from "react-icons/cg"
+import {AiFillLinkedin} from "react-icons/ai"
 import { themify } from "../lib/darkify"
 
 export default function Contact(){
@@ -42,6 +43,9 @@ export default function Contact(){
                         <li><FaGithub/> concerning a project write an issue
                             on one of my repos</li>
                         <li><FaReddit/> reddit: u/Angramme</li>
+                        <li><AiFillLinkedin/> LinkedIn: <a href="https://www.linkedin.com/in/kacper-ozieblowski" target="_blank" rel="noopener" style={{textDecoration:"underline"}}>
+                            in/kacper-ozieblowski
+                        </a></li>
                     </ul>
                 </IconContext.Provider>
             </Block>
