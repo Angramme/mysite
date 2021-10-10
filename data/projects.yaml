@@ -24,6 +24,9 @@ aids_projet_si:
   img: aids_cam.webp
   image_only: true
 
+polyrhythm3:
+  img: "https://github.com/Angramme/polyrhythm3/raw/main/readme/visual.png"
+  image_only: true
 polyrhythm:
   img: "polyrhythm.webp"
   live: https://angramme.github.io/polyrhythm/
