@@ -67,7 +67,7 @@ export default function  Home(){
                     </Block>
                 </div>
             </div>
-            <Block title="Competences">
+            <Block title="Competences" style={{position:"relative"}}>
                 <p>
                     I have experience with several progamming languages which include primarly <B>JS</B>, <B>Node.js</B>, <B>Python</B>, <B>C++</B>, <B>Haskell</B>, <B>C</B>, <B>GLSL</B>, <B>Processing</B>, <B>CSS</B> (<B>SASS</B>, <B>SCSS</B>) and <B>HTML</B>. 
                     I also have a limited knowledge of <B>Java</B>, <B>Rust</B>, <B>Lua</B>, <B>SQL</B>, <B>MongoDB</B>, and others.
@@ -112,7 +112,7 @@ export default function  Home(){
                     </div>
                 </div>
             </Block>
-            <div className={styles.seemyprojects}>
+            <div className={styles.seemyprojects} style={{position:"relative"}}>
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
                 <Link href="/projects">
                     <div>
