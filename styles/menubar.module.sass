@@ -7,19 +7,21 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     font-size: 1.25rem
     position: relative
     z-index: 100
-    background: $frosted-glass
-    backdrop-filter: blur($blur-amount) //hue-rotate($hue-rotate) opacity($background-opacity)
+    // background: $frosted-glass
+    background: linear-gradient(180deg, $frosted-glass, $frosted-glass, rgba(255, 255, 255, 0))
+    // backdrop-filter: blur($blur-amount) //hue-rotate($hue-rotate) opacity($background-opacity)
     position: fixed
     top:0
     left:0
     right:0
     padding: 1rem
     padding-top: 1.5rem
-    border-bottom: solid $border-color 1px
+    // border-bottom: solid $border-color 1px
     color: $text-color
     &._dark
         color: $dk-text-color
-        background: $dk-frosted-glass
+        // background: $dk-frosted-glass
+        background: linear-gradient(180deg, $dk-frosted-glass, $dk-frosted-glass, rgba(0, 0, 0, 0))
         border-bottom-color: $dk-border-color
     @media #{$switch-layout}
         padding: 0.5rem
