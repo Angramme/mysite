@@ -8,21 +8,33 @@ import { useDarkMode } from "next-dark-mode"
 
 export default function AnimBackground(){
     const darkmode = useDarkMode().darkModeActive;
-    return <Canvas args={{darkmode, func:dots}} script={hook} style={
-        {
-            position:"fixed",
-            top:0,
-            bottom:0,
-            left:0,
-            right:0,
-            width:"100vw",
-            height:"100vh",
-            zIndex: 1,
-            background: darkmode ?
-                "linear-gradient(90deg, rgb(24, 24, 26), rgb(43, 47, 53))" : 
-                "linear-gradient(90deg, rgb(205 205 205), rgb(218 219 226))",
-        }
-    }></Canvas>
+    return <div style={{
+        position:"fixed",
+        top:0,
+        bottom:0,
+        left:0,
+        right:0,
+        width:"100vw",
+        height:"100vh",
+        background: darkmode ?
+            "linear-gradient(90deg, rgb(24, 24, 26), rgb(43, 47, 53))" : 
+            "linear-gradient(90deg, rgb(205 205 205), rgb(218 219 226))",
+    }}></div>
+    // return <Canvas args={{darkmode, func:dots}} script={hook} style={
+    //     {
+    //         position:"fixed",
+    //         top:0,
+    //         bottom:0,
+    //         left:0,
+    //         right:0,
+    //         width:"100vw",
+    //         height:"100vh",
+    //         zIndex: 1,
+    //         background: darkmode ?
+    //             "linear-gradient(90deg, rgb(24, 24, 26), rgb(43, 47, 53))" : 
+    //             "linear-gradient(90deg, rgb(205 205 205), rgb(218 219 226))",
+    //     }
+    // }></Canvas>
 }
 
 function hook(can, {darkmode, func}){

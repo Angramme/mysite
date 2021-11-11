@@ -16,6 +16,7 @@ import styles_raw from "../styles/index.module.sass"
 import { themify } from '../lib/darkify'
 
 import css_helpers from "../styles/organisation.module.sass"
+import DisplayArt from '../components/DisplayArt'
 
 export default function  Home(){
     const styles = themify(styles_raw);
@@ -34,7 +35,11 @@ export default function  Home(){
             <h1 className={css_helpers.SEO_header}>Kacper Ozieblowski</h1>
             <h1 className={css_helpers.SEO_header}>Sorbonne University</h1>
 
-            <div className={css_helpers.line} style={{marginBottom:"5rem"}}>
+            <div className={styles.display_art_parent}>
+                <DisplayArt></DisplayArt>
+            </div>
+
+            <div className={css_helpers.line} style={{position:"relative"}}>
 
                 <div className={styles.image_parent}>
                     {/* <img className={styles.image} src="/me.jpg" alt="photo of Kacper Ozieblowski"></img> */}
