@@ -60,7 +60,7 @@ export default function MenuBar() {
                             sizes="10vh"
                             />
                     </div> */}
-                    <div className={styles.header_text}>Ozieblowski Kacper</div>
+                    <div className={styles.header_text}>Kacper Ozieblowski</div>
                 </div>
             </Link>
             <div className={styles.btns}>
