@@ -58,7 +58,13 @@ export default function  Home(){
                     <div style={{marginTop: "3rem"}}></div>
                     <Block title="About me">
                         {/* {random_sentences(50)} */}
-                        Hi! I'm Kacper Ozieblowski, a first year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
+                        Hi! I'm Kacper Ozieblowski, a {['first', 'second', 'third', 'not anymore'][(()=>{
+                            var dt1 = new Date("09/1/2020");
+                            var diffYear =(Date.now() - dt1.getTime()) / 1000;
+                            diffYear /= (60 * 60 * 24);
+                            console.log(diffYear)
+                            return Math.abs(Math.round(diffYear/365.25))
+                        })()]} year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
                         I'm a passionate of programing which I discovered at the age of 14.
                         It became my hobby ever since.
                         I speak 3 languages fluently, <B>English, French</B> and <B>Polish</B>.
