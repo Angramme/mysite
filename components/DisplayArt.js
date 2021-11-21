@@ -8,11 +8,13 @@ import { AiFillCaretDown } from 'react-icons/ai'
 
 import dancing_shapes from "../lib/animated_backgrounds/dancing_shapes";
 import lines from "../lib/animated_backgrounds/lines";
+import lines2 from "../lib/animated_backgrounds/lines2";
 // import dots from "../lib/animated_backgrounds/dots";
 
 const ART = [
     [dancing_shapes, "dancing shapes"],
-    [lines, "line"],
+    [lines, "lines"],
+    [lines2, "lines 2"],
     //[dots, "dots"],
 ]
 

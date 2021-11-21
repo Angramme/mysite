@@ -62,7 +62,6 @@ export default function  Home(){
                             var dt1 = new Date("09/1/2020");
                             var diffYear =(Date.now() - dt1.getTime()) / 1000;
                             diffYear /= (60 * 60 * 24);
-                            console.log(diffYear)
                             return Math.abs(Math.round(diffYear/365.25))
                         })()]} year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
                         I'm a passionate of programing which I discovered at the age of 14.
