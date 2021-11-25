@@ -11,6 +11,7 @@ import lines from "../lib/animated_backgrounds/lines";
 import lines2 from "../lib/animated_backgrounds/lines2";
 import grids from "../lib/animated_backgrounds/grids";
 import boids from "../lib/animated_backgrounds/boids";
+import { useEffect, useRef } from "react";
 // import dots from "../lib/animated_backgrounds/dots";
 
 const ART = [
@@ -26,13 +27,26 @@ export default function DisplayArt(){
     const styles = themify(styles_raw);
     const darkmode = useDarkMode().darkModeActive;
     const artpiece = ART[Math.random() * ART.length |0];
+    let scrollDown = useRef(null);
+
+    useEffect(()=>{
+        const scroller = ()=>{
+            if(scrollDown.current)
+                scrollDown.current.style.bottom = `${1.5*window.scrollY|0}px`;
+        };
+        window.addEventListener("scroll", scroller);
+        return function cleanup(){
+            window.removeEventListener("scroll", scroller);
+        }
+    }, [scrollDown]);
+
     return <div className={styles.parent}>
         <Canvas
             script={runArt}
             className={styles.canvas}
             args={{darkmode, func: artpiece[0]}}
         />
-        <h2 className={styles.header}> 
+        <h2 className={styles.header} ref={scrollDown}> 
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
             scroll down
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
@@ -66,7 +80,8 @@ function runArt(CAN, {darkmode, func}){
                 CAN.width = CAN.offsetWidth |0,
                 CAN.height = CAN.offsetHeight |0,
             ];
-        }
+        },
+        isVisible: ()=>window.scrollY/window.innerHeight*2.0 < 1.,
     });
 
     let Q = 1;
