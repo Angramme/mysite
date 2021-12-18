@@ -8,7 +8,7 @@ import Image from "next/image"
 
 import DarkMode from "../../components/darkmode_button"
 
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomDark as dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import styles_raw from "../../styles/project.module.sass"
@@ -55,7 +55,9 @@ const md_renderers = styles=>({
     </div>,
     heading: ({children})=><h1 className={styles.md_heading}>{children}</h1>,
     link: ({children, href})=><a href={href} target="_blank" className={styles.md_link}>{children}</a>,
-    code: ({language, value}) => <SyntaxHighlighter style={dark} language={language} children={value} />,
+    code: ({children, language}) => children ? children.map(ch=><SyntaxHighlighter style={dark} language={language}>
+        {ch}
+    </SyntaxHighlighter>) : "",
 })
 
 export default function Project({project}){
