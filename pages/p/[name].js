@@ -47,7 +47,7 @@ export async function getStaticPaths(){
 
 const md_renderers = styles=>({
     // text: ({value})=><div>{value}</div>
-    image: ({alt, src})=><div className={styles.md_image}>
+    img: ({alt, src})=><div className={styles.md_image}>
         <a href={src} target="_blank">
             <img className={styles.md_image_image} src={src}></img>
         </a>
@@ -90,7 +90,7 @@ export default function Project({project}){
                 <ReactMarkdown 
                     className={styles.md}
                     children={project.readme_md}
-                    renderers={md_renderers(styles)}
+                    components={md_renderers(styles)}
                     plugins={[gfm]}
                     ></ReactMarkdown>
                 {project.readme_md.length==0?
