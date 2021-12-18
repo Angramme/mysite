@@ -64,7 +64,7 @@ export default function Project({project}){
                     <div className={styles.desc}>
                         <ReactMarkdown 
                             children={firstNlines(project.readme_md, MAX_DESC_LEN)+"..."} 
-                            renderers={md_renderers(styles)}
+                            components={md_renderers(styles)}
                             className={styles.markdown}>
                         </ReactMarkdown>
                         <div className={styles.desc_cutoff}></div>
