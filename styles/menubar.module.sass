@@ -44,23 +44,40 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
         // height: 2rem
         display: none
 
-.header_text
-    display: inline
-    font-family: 'Press Start 2P', cursive
-    font-size: 0.85rem
 .header
     font-weight: bold
     margin: 0 0 0 3rem
     display: inline
     +transition(filter 0.4s, color 0.5s)
+
+    & > .header_text
+        display: inline
+        font-family: 'Press Start 2P', cursive
+        font-size: 0.85rem
+
+    @keyframes rainbow 
+        0%
+            color: red
+        20%
+            color: green
+        40%
+            color: blue
+        60%
+            color: yellow
+        80%
+            color: pink
+        100%
+            color: red
     
     &:hover, &:active
         cursor: pointer
-        color: $selected-color
-        // text-decoration: underline
-        filter: blur(1px)
-    &._dark:hover
-        color: $dk-selected-color
+        & > .header_text > span
+            animation: rainbow 2s infinite linear
+
+    @for $i from 0 to 20
+        & > .header_text > span:nth-child(#{$i})
+            animation-delay: random(10)*0.1s
+
     @media #{$switch-layout}
         margin: 0
         text-align: center
@@ -85,6 +102,7 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
 
 .button
     font-size: 1.1rem
+    font-weight: bold
     display: inline
     // float: right
     padding: 0 1rem
