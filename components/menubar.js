@@ -60,7 +60,10 @@ export default function MenuBar() {
                             sizes="10vh"
                             />
                     </div> */}
-                    <div className={styles.header_text}>Kacper Ozieblowski</div>
+                    <div className={styles.header_text}>
+                        {Array.from("Kacper Ozieblowski").map(l=>
+                            <span>{l}</span>)}
+                    </div>
                 </div>
             </Link>
             <div className={styles.btns}>
