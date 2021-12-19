@@ -62,7 +62,7 @@ export default function MenuBar() {
                     </div> */}
                     <div className={styles.header_text}>
                         {Array.from("Kacper Ozieblowski").map(l=>
-                            <span>{l}</span>)}
+                            <span key={l}>{l}</span>)}
                     </div>
                 </div>
             </Link>

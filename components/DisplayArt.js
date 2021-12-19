@@ -48,7 +48,7 @@ export default function DisplayArt(){
         />
         <h2 className={styles.header} ref={scrollDown}> 
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
-            {Array.from("scroll down").map(l=><span>{l}</span>)}
+            {Array.from("scroll down").map(l=><span key={l}>{l}</span>)}
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
         </h2>
         {/* <span>{artpiece[1]}</span> */}
