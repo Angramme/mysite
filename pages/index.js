@@ -42,17 +42,15 @@ export default function  Home(){
             <div className={css_helpers.line} style={{position:"relative"}}>
 
                 <div className={styles.image_parent}>
-                    {/* <img className={styles.image} src="/me.jpg" alt="photo of Kacper Ozieblowski"></img> */}
                     <div className={styles.image}>
                         <Image 
                             layout="fill" 
-                            src="/me.jpg" 
+                            src="/me.png" 
                             alt="photo of Kacper Ozieblowski"
                             quality={90}
                             sizes="50vh"
                             />
                     </div>
-                    {/* <div className={styles.image_legend}>Figure 1: Me.</div> */}
                 </div>
                 <div>   
                     <div style={{marginTop: "3rem"}}></div>
