@@ -70,6 +70,23 @@ export default function  Home(){
                     </Block>
                 </div>
             </div>
+            <Block title="Achievements" style={{textIndent: '0', lineHeight:'180%', position: 'relative'}}>
+                <img 
+                    src="https://swerc.eu/2021/theme/images/favicon.png"
+                    style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                2021-22 SWERC : representing Sorbonne Université (not yet ranked)
+                <br/>
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
+                    style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                2020-21 Prologin : finalist (20th place)
+                <br/>
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
+                    style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                2021-22 Prologin : semi-finalist (finals not yet annouced)
+                <br/>
+            </Block>
             <Block title="Competences" style={{position:"relative"}}>
                 <p>
                     I have experience with several progamming languages which include primarly <B>JS</B>, <B>Node.js</B>, <B>Python</B>, <B>C++</B>, <B>Haskell</B>, <B>C</B>, <B>GLSL</B>, <B>Processing</B>, <B>CSS</B> (<B>SASS</B>, <B>SCSS</B>) and <B>HTML</B>. 
@@ -114,6 +131,9 @@ export default function  Home(){
                         </ul>
                     </div>
                 </div>
+            </Block>
+            <Block style={{position:"relative", textIndent: '0'}}>
+                Full Curriculum-Vitae <a href="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/view?usp=sharing" target="_blank" rel="noopener">(click here)</a>
             </Block>
             <div className={styles.seemyprojects} style={{position:"relative"}}>
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
