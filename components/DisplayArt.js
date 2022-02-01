@@ -5,13 +5,14 @@ import {themify} from "../lib/darkify";
 
 import Canvas from "./canvas";
 import { AiFillCaretDown } from 'react-icons/ai'
+import { CgDice5 } from 'react-icons/cg'
 
 import dancing_shapes from "../lib/animated_backgrounds/dancing_shapes";
 import lines from "../lib/animated_backgrounds/lines";
 import lines2 from "../lib/animated_backgrounds/lines2";
 import grids from "../lib/animated_backgrounds/grids";
 import boids from "../lib/animated_backgrounds/boids";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 // import dots from "../lib/animated_backgrounds/dots";
 
 const ART = [
@@ -26,13 +27,19 @@ const ART = [
 export default function DisplayArt(){
     const styles = themify(styles_raw);
     const darkmode = useDarkMode().darkModeActive;
-    const artpiece = ART[Math.random() * ART.length |0];
+    let [artpiece, setArtpiece] = useState(ART[Math.random() * ART.length |0]);
+    const shuffle = ()=>{
+        setArtpiece(ART[Math.random() * ART.length |0]);
+    }
     let scrollDown = useRef(null);
+    let artName = useRef(null);
 
     useEffect(()=>{
         const scroller = ()=>{
             if(scrollDown.current)
                 scrollDown.current.style.bottom = `${1.5*window.scrollY|0}px`;
+            if(artName.current)
+                artName.current.style.right = `${8-window.scrollY*.1|0}vh`;
         };
         window.addEventListener("scroll", scroller);
         return function cleanup(){
@@ -46,12 +53,15 @@ export default function DisplayArt(){
             className={styles.canvas}
             args={{darkmode, func: artpiece[0]}}
         />
+        <span ref={artName} className={styles.name}>
+            {artpiece[1]}.
+            <span className={styles.dice} onClick={shuffle}><CgDice5/></span>
+        </span>
         <h2 className={styles.header} ref={scrollDown}> 
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
             {Array.from("scroll down").map(l=><span key={l}>{l}</span>)}
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
         </h2>
-        {/* <span>{artpiece[1]}</span> */}
     </div>
 }
 
