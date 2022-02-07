@@ -8,7 +8,7 @@ import AnimatedBackground from "../components/AnimatedBackground"
 import css_helpers from "../styles/organisation.module.sass"
 
 import { IconContext } from 'react-icons'
-import {FaGithub, FaReddit} from "react-icons/fa"
+import { FaGithub, FaReddit, FaInstagram } from "react-icons/fa"
 import {CgMail} from "react-icons/cg"
 import {AiFillLinkedin} from "react-icons/ai"
 import { themify } from "../lib/darkify"
@@ -41,10 +41,15 @@ export default function Contact(){
                             <span className={styles.email5}></span>
                         </li>
                         <li><FaGithub/> concerning a project write an issue
-                            on one of my repos</li>
+                            on one of my repos. (
+                            <a href="https://github.com/Angramme" target="_blank" rel="noopener" style={{textDecoration:"underline"}}>My GitHub</a>)
+                        </li>
                         <li><FaReddit/> reddit: u/Angramme</li>
                         <li><AiFillLinkedin/> LinkedIn: <a href="https://www.linkedin.com/in/kacper-ozieblowski" target="_blank" rel="noopener" style={{textDecoration:"underline"}}>
                             in/kacper-ozieblowski
+                        </a></li>
+                        <li><FaInstagram/> Instagram: <a href="https://www.instagram.com/shaderfun/" target="_blank" rel="noopener" style={{textDecoration:"underline"}}>
+                            @shaderfun
                         </a></li>
                     </ul>
                 </IconContext.Provider>
