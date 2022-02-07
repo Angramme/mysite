@@ -70,22 +70,27 @@ export default function  Home(){
                     </Block>
                 </div>
             </div>
-            <Block title="Achievements" style={{textIndent: '0', lineHeight:'180%', position: 'relative'}}>
-                <img 
-                    src="https://swerc.eu/2021/theme/images/favicon.png"
-                    style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                2021-22 SWERC : representing Sorbonne Université (not yet ranked)
-                <br/>
-                <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
-                    style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                2020-21 Prologin : finalist (20th place)
-                <br/>
-                <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
-                    style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                2021-22 Prologin : semi-finalist (finals not yet annouced)
-                <br/>
+            <Block title="Achievements" style={{ textIndent: '0', position: 'relative'}}>
+                <ul style={{padding: 0, margin: '0 0 0 .5rem', listStyle: 'none' }}>
+                    <li>
+                        <img 
+                            src="https://swerc.eu/2021/theme/images/favicon.png"
+                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        2021-22 SWERC : representing Sorbonne Université (not yet ranked)
+                    </li>
+                    <li>
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
+                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        2020-21 Prologin : finalist (20th place)
+                    </li>
+                    <li>
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
+                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        2021-22 Prologin : semi-finalist (finals not yet annouced)
+                    </li>
+                </ul>
             </Block>
             <Block title="Competences" style={{position:"relative"}}>
                 <p>
