@@ -17,6 +17,7 @@ import { themify } from '../lib/darkify'
 
 import css_helpers from "../styles/organisation.module.sass"
 import DisplayArt from '../components/DisplayArt'
+import ScrollRoll from '../components/ScrollRoll'
 
 export default function  Home(){
     const styles = themify(styles_raw);
@@ -43,31 +44,29 @@ export default function  Home(){
 
                 <div className={styles.image_parent}>
                     <div className={styles.image}>
-                        <Image 
-                            layout="fill" 
-                            src="/me.png" 
-                            alt="photo of Kacper Ozieblowski"
-                            quality={90}
-                            sizes="50vh"
-                            />
+                        {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
+                            <Image 
+                                layout="fill" 
+                                src="/me.png" 
+                                alt="photo of Kacper Ozieblowski"
+                                quality={90}
+                                sizes="50vh"
+                                />
+                        {/* </ScrollRoll> */}
                     </div>
                 </div>
                 <div>   
-                    <div style={{marginTop: "3rem"}}></div>
-                    <Block title="About me">
-                        {/* {random_sentences(50)} */}
-                        Hi! I'm Kacper Ozieblowski, a {['first', 'second', 'third', 'not anymore'][(()=>{
-                            var dt1 = new Date("09/1/2020");
-                            var diffYear =(Date.now() - dt1.getTime()) / 1000;
-                            diffYear /= (60 * 60 * 24);
-                            return Math.abs(Math.round(diffYear/365.25))
-                        })()]} year student of CS and Math at <B>Sorbonne University</B>, Jussieu Campus. 
-                        I'm a passionate of programing which I discovered at the age of 14.
-                        It became my hobby ever since.
-                        I speak 3 languages fluently, <B>English, French</B> and <B>Polish</B>.
-                        I also occasionally play piano, paint, draw, because it makes my time schedule seem
-                        balanced. 
-                    </Block>
+                    <div style={{marginTop: "2.5rem"}}></div>
+                    {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
+                        <Block title="About me">
+                            I'm Kacper Ozieblowski, a {['first', 'second', 'third', 'not anymore'][(()=>{
+                                var dt1 = new Date("09/1/2020");
+                                var diffYear =(Date.now() - dt1.getTime()) / 1000;
+                                diffYear /= (60 * 60 * 24);
+                                return Math.abs(Math.round(diffYear/365.25))
+                            })()]}-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a sidekick (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> (6yr in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
+                        </Block>
+                    {/* </ScrollRoll> */}
                 </div>
             </div>
             <Block title="Achievements" style={{ textIndent: '0', position: 'relative'}}>
@@ -82,60 +81,38 @@ export default function  Home(){
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                        2020-21 Prologin : finalist (20th place)
+                        2021-22 Prologin : semi-finalist (finals not yet annouced)
                     </li>
                     <li>
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                        2021-22 Prologin : semi-finalist (finals not yet annouced)
+                        2020-21 Prologin : finalist (20th place)
                     </li>
                 </ul>
             </Block>
             <Block title="Competences" style={{position:"relative"}}>
-                <p>
-                    I have experience with several progamming languages which include primarly <B>JS</B>, <B>Node.js</B>, <B>Python</B>, <B>C++</B>, <B>Haskell</B>, <B>C</B>, <B>GLSL</B>, <B>Processing</B>, <B>CSS</B> (<B>SASS</B>, <B>SCSS</B>) and <B>HTML</B>. 
-                    I also have a limited knowledge of <B>Java</B>, <B>Rust</B>, <B>Lua</B>, <B>SQL</B>, <B>MongoDB</B>, and others.
-                    I also plan to learn <B>OCaml</B> next year.
-                </p>
-                <p>
-                    I have some experience with various libraries: <br/>
-                </p>
-                <div className={css_helpers["line-wrap"]}>
-                    <div>
-                        In Python:
-                        <ul>
-                            <li>OpenCV</li>
-                            <li>TensorFlow</li>
-                            <li>Keras</li>
-                            <li>Flask</li>
-                            <li>pyGame</li>
-                        </ul>
-                    </div>
-                    <div>
-                        In Node.js and JS:
-                        <ul>
-                            <li>Fastify</li>
-                            <li>Express</li>
-                            <li>Next.js</li>
-                            <li>React</li>
-                            <li>OpenCV</li>
-                            <li>Three.js</li>
-                            <li>p5.js</li>
-                            <li>Babel</li>
-                        </ul>
-                    </div>
-                    <div>
-                        In C++:
-                        <ul>
-                            <li>A chunk of STL and STD</li>
-                            <li>OpenCV</li>
-                            <li>LLVM</li>
-                            <li>SFML</li>
-                            <li>Boost included in STD</li>
-                        </ul>
-                    </div>
-                </div>
+                My skill set is more or less uniform across major domains of CS. 
+                <ul style={{listStyleType: 'none', textIndent: 0}}>
+                    <li>
+                        - experience with designing and implementing algorithms (cf. programming competitions) which I primarily do in <B>C++</B>. 
+                    </li>
+                    <li>
+                        - capable web-dev (cf. this website), implying knowledge in <B>JavaScript</B> (+<B>Node.js</B>), <B>CSS</B> (+<B>SASS SCSS</B>), and <B>HTML</B>. I have made 2 projects with <B>Next.js</B>.
+                    </li>
+                    <li>
+                        -* In a related theme, I create generative art. I primarily use <B>GLSL</B> shaders, <B>three.js</B>, <B>Processing</B>, <B>p5.js</B> <B>SFML</B>, and other creative coding frameworks. 
+                    </li>
+                    <li>
+                        - experience with relational (<B>SQL</B> style) databases
+                    </li>
+                    <li>
+                        -+ <B>Python, Rust, Haskell, OCaml</B>...
+                    </li>
+                    <li>
+                        - Lastly, I have some dated experience with Flask, OpenCV, Fastify, Express, and LLVM.
+                    </li>
+                </ul>
             </Block>
             <Block style={{position:"relative", textIndent: '0'}}>
                 Full Curriculum-Vitae <a href="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/view?usp=sharing" target="_blank" rel="noopener">(click here)</a>
