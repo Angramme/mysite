@@ -17,7 +17,7 @@ export default function AnimBackground(){
         width:"100vw",
         height:"100vh",
         background: darkmode ?
-            "linear-gradient(90deg, rgb(24, 24, 26), rgb(43, 47, 53))" : 
+            "linear-gradient(90deg, rgb(24, 24, 26), rgb(33, 37, 38))" : 
             "linear-gradient(90deg, rgb(205 205 205), rgb(218 219 226))",
     }}></div>
     // return <Canvas args={{darkmode, func:dots}} script={hook} style={
