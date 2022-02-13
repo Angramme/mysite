@@ -57,9 +57,9 @@ export default function DisplayArt(){
             {artpiece[1]}.
             <span className={styles.dice} onClick={shuffle}><CgDice5/></span>
         </span>
-        <h2 className={styles.header} ref={scrollDown}> 
+        <h2 className={styles.header} ref={scrollDown} key="h2"> 
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
-            {Array.from("scroll down").map(l=><span key={l}>{l}</span>)}
+            {Array.from("scroll down").map((l, i)=><span key={i+l}>{l}</span>)}
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
         </h2>
     </div>
