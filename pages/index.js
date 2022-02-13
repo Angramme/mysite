@@ -17,7 +17,7 @@ import { themify } from '../lib/darkify'
 
 import css_helpers from "../styles/organisation.module.sass"
 import DisplayArt from '../components/DisplayArt'
-import ScrollRoll from '../components/ScrollRoll'
+// import ScrollRoll from '../components/ScrollRoll'
 
 export default function  Home(){
     const styles = themify(styles_raw);
