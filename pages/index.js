@@ -81,7 +81,7 @@ export default function  Home(){
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                        2021-22 Prologin : semi-finalist (finals not yet annouced)
+                        2021-22 Prologin : finalist (not yet ranked)
                     </li>
                     <li>
                         <img 
