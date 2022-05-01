@@ -75,7 +75,7 @@ export default function  Home(){
                         <img 
                             src="https://swerc.eu/2021/theme/images/favicon.png"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                        2021-22 SWERC : representing Sorbonne Université (not yet ranked)
+                        2021-22 SWERC : represented Sorbonne Université
                     </li>
                     <li>
                         <img 
