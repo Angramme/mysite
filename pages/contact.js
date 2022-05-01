@@ -33,12 +33,22 @@ export default function Contact(){
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
                     <ul>
                         <li><CgMail/> 
-                            {/* email: Kacper.Ozieblowski@etu.sorbonne-universite.fr */}
-                            <span className={styles.email1}></span>
-                            <span className={styles.email2}></span>
-                            <span className={styles.email3}></span>
-                            <span className={styles.email4}></span>
-                            <span className={styles.email5}></span>
+                            <a style={{cursor:'pointer'}} onClick={()=>{
+                                // avoid parser bots copying my email...
+                                let email = decodeURIComponent(window.atob('b3ppZWJsb3dza2kua2FjcGVyJTQwZ21haWwuY29t'))
+                                navigator.clipboard.writeText(email)
+                                .catch(console.log);
+                                setTimeout(()=>alert("copied email: "+email+" to clipboard!"), 100);
+                            }
+                            }>
+
+                                {/* email: Kacper.Ozieblowski@etu.sorbonne-universite.fr */}
+                                <span className={styles.email1}></span>
+                                <span className={styles.email2}></span>
+                                <span className={styles.email3}></span>
+                                <span className={styles.email4}></span>
+                                <span className={styles.email5}></span>
+                            </a>
                         </li>
                         <li><FaGithub/> concerning a project write an issue
                             on one of my repos. (
