@@ -59,12 +59,7 @@ export default function  Home(){
                     <div style={{marginTop: "2.5rem"}}></div>
                     {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
                         <Block title="About me" style={{textAlign: 'justify'}}>
-                            I'm Kacper Ozieblowski, a {['first', 'second', 'third', 'not anymore'][(()=>{
-                                var dt1 = new Date("09/1/2020");
-                                var diffYear =(Date.now() - dt1.getTime()) / 1000;
-                                diffYear /= (60 * 60 * 24);
-                                return Math.abs(Math.round(diffYear/365.25))
-                            })()]}-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> (6yr in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
+                            I'm Kacper Ozieblowski, a second-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> (6yr in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
                         </Block>
                     {/* </ScrollRoll> */}
                 </div>
