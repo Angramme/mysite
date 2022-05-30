@@ -76,13 +76,13 @@ export default function  Home(){
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                        2021-22 Prologin : finalist (not yet ranked)
+                        2021-22 Prologin : finalist - 9th place (out of 100 finalists and 1000 candidates)
                     </li>
                     <li>
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
-                        2020-21 Prologin : finalist (20th place)
+                        2020-21 Prologin : finalist - 25th place (out of 100 finalists and 1000 candidates)
                     </li>
                 </ul>
             </Block>
