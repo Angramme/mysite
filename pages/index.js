@@ -47,7 +47,7 @@ export default function  Home(){
                         {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
                             <Image 
                                 layout="fill" 
-                                src="/me.png" 
+                                src="/photo.jpg" 
                                 alt="photo of Kacper Ozieblowski"
                                 quality={90}
                                 sizes="50vh"
