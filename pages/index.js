@@ -93,19 +93,22 @@ export default function  Home(){
                         - experience with designing and implementing algorithms (cf. programming competitions) which I primarily do in <B>C++</B>. 
                     </li>
                     <li>
-                        - capable web-dev (cf. this website), implying knowledge in <B>JavaScript</B> (+<B>Node.js</B>), <B>CSS</B> (+<B>SASS SCSS</B>), and <B>HTML</B>. I have made 2 projects with <B>Next.js</B>.
+                        - experience with software engineering (designed and coded multiple projects from the ground up in C++, C, Python and others). 
+                    </li>
+                    <li>
+                        - capable web-dev (cf. this website), implying knowledge in <B>JavaScript</B>, <B>Node.js</B>, <B>React</B>, <B>CSS</B>, <B>SASS</B>, <B>SCSS</B>, and <B>HTML</B>. I have made 2 projects with <B>Next.js</B>.
                     </li>
                     <li>
                         -* In a related theme, I create generative art. I primarily use <B>GLSL</B> shaders, <B>three.js</B>, <B>Processing</B>, <B>p5.js</B> <B>SFML</B>, and other creative coding frameworks. 
                     </li>
                     <li>
+                        - experience with <B>Python, OCaml, Rust</B>...
+                    </li>
+                    <li>
                         - experience with relational (<B>SQL</B> style) databases
                     </li>
                     <li>
-                        -+ <B>Python, Rust, Haskell, OCaml</B>...
-                    </li>
-                    <li>
-                        - Lastly, I have some dated experience with Flask, OpenCV, Fastify, Express, and LLVM.
+                        - Lastly, I have some dated experience with Haskell as well as Flask, OpenCV, Fastify, Express, and LLVM.
                     </li>
                 </ul>
             </Block>
