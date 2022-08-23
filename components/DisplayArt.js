@@ -54,8 +54,9 @@ export default function DisplayArt(){
             args={{darkmode, func: artpiece[0]}}
         />
         <span ref={artName} className={styles.name}>
-            {artpiece[1]}.
-            <span className={styles.dice} onClick={shuffle}><CgDice5/></span>
+            animation : <br/> <i>"{artpiece[1]}"</i>
+            <br/> <a className={styles.dice_con} onClick={shuffle}>Shuffle!
+            <span className={styles.dice} ><CgDice5/></span></a>
         </span>
         <h2 className={styles.header} ref={scrollDown} key="h2"> 
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
