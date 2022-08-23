@@ -59,32 +59,68 @@ export default function  Home(){
                     <div style={{marginTop: "2.5rem"}}></div>
                     {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
                         <Block title="About me" style={{textAlign: 'justify'}}>
-                            I'm Kacper Ozieblowski, a second-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> (6yr in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
+                            I'm Kacper Ozieblowski, a third-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> (6yr in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
                         </Block>
                     {/* </ScrollRoll> */}
                 </div>
             </div>
             <Block title="Achievements" style={{ textIndent: '0', position: 'relative'}}>
-                <ul style={{padding: 0, margin: '0 0 0 .5rem', listStyle: 'none' }}>
-                    <li>
+                <table style={{padding: 0, margin: '0 0 0 .5rem', listStyle: 'none' }}>
+                    <tr>
+                        <th>
                         <img 
                             src="https://swerc.eu/2021/theme/images/favicon.png"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        </th>
+                        <td>
                         2021-22 SWERC : represented Sorbonne Université
-                    </li>
-                    <li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        </th>
+                        <td>
                         2021-22 Prologin : finalist - 9th place (out of 100 finalists and 1000 candidates)
-                    </li>
-                    <li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        </th>
+                        <td>
                         2020-21 Prologin : finalist - 25th place (out of 100 finalists and 1000 candidates)
-                    </li>
-                </ul>
+                        </td>
+                    </tr>
+                </table>
+            </Block>
+            <Block title="Experience" style={{ textIndent: '0', position: 'relative'}}>
+                <table style={{padding: 0, margin: '0 0 0 .5rem', listStyle: 'none' }}>
+                    <tr>
+                        <th>
+                        <img 
+                            src="/gdsc.png"
+                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        </th>
+                        <td>
+                        2022-23 Lead of the Google Developer Student Club at Sorbonne : Leading a team of passionate students in order to organise Google events at Sorbonne Université. Networking with Googlers and other leads in order to bring events to SU.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                        <img 
+                            src="/SU.png"
+                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                        </th>
+                        <td>
+                        Summer 2022 Research Intern at Sorbonne Université – DO-Calculus on Bayesian Networks : Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base of the <B><a href="https://agrum.gitlab.io">aGrUM project</a></B>. Implementing this logic on networks in C++.
+                        </td>
+                    </tr>
+                </table>
             </Block>
             <Block title="Competences" style={{position:"relative"}}>
                 My skill set is more or less uniform across major domains of CS. 
@@ -112,8 +148,8 @@ export default function  Home(){
                     </li>
                 </ul>
             </Block>
-            <Block style={{position:"relative", textIndent: '0'}}>
-                Full Curriculum-Vitae <a href="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/view?usp=sharing" target="_blank" rel="noopener">(click here)</a>
+            <Block title="Curriculum Vitae" style={{position:"relative", textIndent: '0'}}>
+                To see my full Curriculum-Vitae please <B><a href="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/view?usp=sharing" target="_blank" rel="noopener"> &gt;click here&lt; </a></B>.
             </Block>
             <div className={styles.seemyprojects} style={{position:"relative"}}>
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>

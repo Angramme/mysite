@@ -43,7 +43,7 @@ export default function Project({project}){
             <div className={styles.language}>:: {project.language}</div>
 
                 <div className={styles.options}>
-                    {!project.live ? "" : <a href={project.live} target="_blank" rel="noopener"><div><CgPlayButtonO/> Live Demo</div></a>}
+                    {!project.live ? "" : <a href={project.live} target="_blank" rel="noopener"><div><CgPlayButtonO/> Website</div></a>}
                     <Link href={proj_page} as={proj_page_as}><div><CgReadme/> About</div></Link>
                     <a href={project.repo_page_url} target="_blank" rel="noopener"><div><FaGithub/> GitHub</div></a>
                     {!project.latest_release ? "" : <a href={project.latest_release.html_url} target="_blank" rel="noopener"><div><CgRelease/> {project.latest_release.tag_name}</div></a>}

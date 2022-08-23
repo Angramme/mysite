@@ -1,13 +1,26 @@
 
 ___pinned:
   - polyrhythm3
-  - GrLang
   - fractal_viewer
-  - TreeGenerator
+  - toychain
+  - pseudospectra
+  - GrLang
+  - FFT
   - raytracer
   - mudi
+  - TreeGenerator
   - steganograph
   - dire
+  - interference
+  - fireworks
+
+FFT:
+  alias: Fast Fourier Transform experiments
+  image_only: true
+
+toychain:
+  img: "toy_train.jpg"
+  image_only: true
 
 imgtoascii:
   hide: true
@@ -19,9 +32,20 @@ GrLang:
   # img: "grlang2.png"
   img: terminal.webp
 
+fractal_viewer:
+  alias: Realtime Fractal Renderer
+  image_only: true
+
+pseudospectra:
+  img: "SVD_field.png"
+  image_only: true
+
 aids_projet_si:
   alias: anti-intrusion-detection-system
   img: aids_cam.webp
+  image_only: true
+
+interference:
   image_only: true
 
 polyrhythm3:
@@ -59,6 +83,3 @@ bad-tetris:
   live: https://angramme.github.io/bad-tetris/
   alias: bad tetris
   img: tetris.webp
-
-fractal_viewer:
-  alias: Realtime Fractal Renderer
