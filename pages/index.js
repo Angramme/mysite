@@ -117,8 +117,7 @@ export default function  Home(){
                             style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
                         </th>
                         <td>
-                        Summer 2022 Research Intern at Sorbonne Université – DO-Calculus on Bayesian Networks : 
-                        Role: Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base of the <B><a href="https://agrum.gitlab.io">aGrUM project</a></B>. Implementing this logic on networks in C++.
+                        Summer 2022 Research Intern at Sorbonne Université – DO-Calculus on Bayesian Networks : Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base of the <B><a href="https://agrum.gitlab.io">aGrUM project</a></B>. Implementing this logic on networks in C++.
                         </td>
                     </tr>
                 </table>
