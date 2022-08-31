@@ -64,13 +64,13 @@ export default function  Home(){
                     {/* </ScrollRoll> */}
                 </div>
             </div>
-            <Block title="Achievements" style={{ textIndent: '0', position: 'relative'}}>
-                <table style={{padding: 0, margin: '0 0 0 .5rem', listStyle: 'none' }}>
+            <Block title="Achievements" className={styles.enumer}>
+                <table>
                     <tr>
                         <th>
                         <img 
                             src="https://swerc.eu/2021/theme/images/favicon.png"
-                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                            className={styles.logo}/>
                         </th>
                         <td>
                         2021-22 SWERC : represented Sorbonne Université
@@ -80,7 +80,7 @@ export default function  Home(){
                         <th>
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
-                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                            className={styles.logo}/>
                         </th>
                         <td>
                         2021-22 Prologin : finalist - 9th place (out of 100 finalists and 1000 candidates)
@@ -90,7 +90,7 @@ export default function  Home(){
                         <th>
                         <img 
                             src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
-                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                            className={styles.logo}/>
                         </th>
                         <td>
                         2020-21 Prologin : finalist - 25th place (out of 100 finalists and 1000 candidates)
@@ -98,13 +98,12 @@ export default function  Home(){
                     </tr>
                 </table>
             </Block>
-            <Block title="Experience" style={{ textIndent: '0', position: 'relative'}}>
-                <table style={{padding: 0, margin: '0 0 0 .5rem', listStyle: 'none' }}>
+            <Block title="Experience" className={styles.enumer}>
+                <table>
                     <tr>
                         <th>
                         <img 
-                            src="/gdsc.png"
-                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                            src="/gdsc.png" className={styles.logo}/>
                         </th>
                         <td>
                         2022-23 Lead of the Google Developer Student Club at Sorbonne : Leading a team of passionate students in order to organise Google events at Sorbonne Université. Networking with Googlers and other leads in order to bring events to SU.
@@ -113,8 +112,7 @@ export default function  Home(){
                     <tr>
                         <th>
                         <img 
-                            src="/SU.png"
-                            style={{height:'1.5rem', display:'inline', verticalAlign: 'middle', marginRight:'1rem'}}/>
+                            src="/SU.png" className={styles.logo}/>
                         </th>
                         <td>
                         Summer 2022 Research Intern at Sorbonne Université – DO-Calculus on Bayesian Networks : Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base of the <B><a href="https://agrum.gitlab.io">aGrUM project</a></B>. Implementing this logic on networks in C++.
@@ -122,7 +120,7 @@ export default function  Home(){
                     </tr>
                 </table>
             </Block>
-            <Block title="Competences" style={{position:"relative"}}>
+            <Block title="Competences" className={styles.enumer}>
                 My skill set is more or less uniform across major domains of CS. 
                 <ul style={{listStyleType: 'none', textIndent: 0}}>
                     <li>
