@@ -5,6 +5,7 @@ import Menubar from "../components/menubar"
 import Layout from "../components/layout"
 import Block from "../components/block"
 import Footer from "../components/footer"
+import Enumer from '../components/Enumer'
 import AnimBackground from "../components/AnimatedBackground"
 // import random_sentences from "../helpers/sentences"
 
@@ -64,63 +65,54 @@ export default function  Home(){
                     {/* </ScrollRoll> */}
                 </div>
             </div>
-            <Block title="Achievements" className={styles.enumer}>
-                <table>
-                    <tr>
-                        <th>
-                        <img 
-                            src="https://swerc.eu/2021/theme/images/favicon.png"
-                            className={styles.logo}/>
-                        </th>
-                        <td>
-                        2021-22 SWERC : represented Sorbonne Université
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                        <img 
-                            src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
-                            className={styles.logo}/>
-                        </th>
-                        <td>
-                        2021-22 Prologin : finalist - 9th place (out of 100 finalists and 1000 candidates)
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                        <img 
-                            src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg"
-                            className={styles.logo}/>
-                        </th>
-                        <td>
-                        2020-21 Prologin : finalist - 25th place (out of 100 finalists and 1000 candidates)
-                        </td>
-                    </tr>
-                </table>
+            <Block title="Achievements">
+                <Enumer
+                    data={[
+                        {
+                            img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg",
+                            dates: "2021-22",
+                            company: "French National Programming Contest (Prologin)",
+                            role: "finalist",
+                            desc: "9th place (out of 100 finalists and 1000 candidates)"
+                        },
+                        {
+                            img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg",
+                            dates: "2020-21",
+                            company: "French National Programming Contest (Prologin)",
+                            role: "finalist",
+                            desc: "25th place (out of 100 finalists and 1000 candidates)"
+                        },
+                        {
+                            img_url: "https://swerc.eu/2021/theme/images/favicon.png",
+                            dates: "2021-22",
+                            company: "Southwestern Europe Regional Contest (SWERC)",
+                            desc: "represented Sorbonne Université"
+                        },
+                    ]}
+                />
             </Block>
-            <Block title="Experience" className={styles.enumer}>
-                <table>
-                    <tr>
-                        <th>
-                        <img 
-                            src="/gdsc.png" className={styles.logo}/>
-                        </th>
-                        <td>
-                        2022-23 Lead of the Google Developer Student Club at Sorbonne : Leading a team of passionate students in order to organise Google events at Sorbonne Université. Networking with Googlers and other leads in order to bring events to SU.
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                        <img 
-                            src="/SU.png" className={styles.logo}/>
-                        </th>
-                        <td>
-                        Summer 2022 Research Intern at Sorbonne Université – DO-Calculus on Bayesian Networks : Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base of the <B><a href="https://agrum.gitlab.io">aGrUM project</a></B>. Implementing this logic on networks in C++.
-                        </td>
-                    </tr>
-                </table>
+            <Block title="Experience">
+                <Enumer data={[
+                    {
+                        img_url: "/gdsc.png",
+                        dates: "2022-23",
+                        role: "Lead",
+                        company: "Google Developer Student Club at Sorbonne",
+                        desc: "Google Developer Student Club Leads are passionate leaders at their universities who are dedicated to helping their peers learn and connect. Google collaborates with Leads and supports them as they start and grow their on-campus communities.",
+                        role_desc: " Leading a team of passionate students in order to organise Google events at Sorbonne Université. Networking with Googlers and other leads in order to bring events to SU."
+                    },
+                    {
+                        img_url: "/SU.png",
+                        dates: "Summer 2022",
+                        role: "Research Intern",
+                        company: "Sorbonne Université",
+                        project: "DO-Calculus on Bayesian Networks",
+                        desc: "The [aGrUM project](https://agrum.gitlab.io) is a library designed to facilitate the development of applications using probabilistic graphical models",
+                        role_desc: 'Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base. Implementing this logic on networks in C++.'
+                    }
+                ]}/>
             </Block>
-            <Block title="Competences" className={styles.enumer}>
+            <Block title="Competences">
                 My skill set is more or less uniform across major domains of CS. 
                 <ul style={{listStyleType: 'none', textIndent: 0}}>
                     <li>
@@ -147,6 +139,12 @@ export default function  Home(){
                 </ul>
             </Block>
             <Block title="Curriculum Vitae" style={{position:"relative", textIndent: '0'}}>
+                {/* <iframe 
+                    src="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/preview" 
+                    width="640" 
+                    height="800" 
+                    allow="autoplay"
+                    style={{width:"100%"}}/> */}
                 To see my full Curriculum-Vitae please <B><a href="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/view?usp=sharing" target="_blank" rel="noopener"> &gt;click here&lt; </a></B>.
             </Block>
             <div className={styles.seemyprojects} style={{position:"relative"}}>
