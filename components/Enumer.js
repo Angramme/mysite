@@ -18,6 +18,7 @@ export default function Enumer({ className, style, data }){
                 + (role_desc && ("\n\nRole: " + role_desc) || "");
             const pdesc = fdesc.substring(0, _overflow) + "...";
             const [s, setS] = useState(false);
+            const smoref = fdesc.length > _overflow;
             return <tr>
                 <th><img src={img_url} className={styles.logo}/></th>
                 <td>
@@ -28,12 +29,12 @@ export default function Enumer({ className, style, data }){
                     <ReactMarkdown 
                         className={styles.md}
                         children={
-                            s ? fdesc : pdesc
+                            s || !smoref ? fdesc : pdesc
                         }
                         // components={md_renderers(styles)}
                         plugins={[gfm]}
                         ></ReactMarkdown>
-                    {fdesc.length > _overflow && <><Arrow className={styles.reicon}/> <a
+                    {smoref && <><Arrow className={styles.reicon}/> <a
                         className={styles.seemore} 
                         onClick={()=>setS(!s)}>{s ? "See less" : "See more"}</a></>}
                 </td>
