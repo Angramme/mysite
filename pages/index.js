@@ -138,6 +138,16 @@ export default function  Home(){
                     </li>
                 </ul>
             </Block>
+            <Block title="Certifications">
+                <Enumer data={[
+                    {
+                        img_url: "https://img.icons8.com/color/480/ielts.png",
+                        dates: "September 2022",
+                        company: "IELTS Academic",
+                        desc: "Obtained an overall band score of **8.0/9.0** translating to **C1** CEFR Level.", 
+                    }
+                ]}/>
+            </Block>
             <Block title="Curriculum Vitae" style={{position:"relative", textIndent: '0'}}>
                 {/* <iframe 
                     src="https://drive.google.com/file/d/14TWExwkJVR_B-ZR9ok05RW2NQW10g4b6/preview" 
