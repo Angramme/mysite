@@ -112,6 +112,16 @@ export default function  Home(){
                     }
                 ]}/>
             </Block>
+            <Block title="Certifications">
+                <Enumer data={[
+                    {
+                        img_url: "https://img.icons8.com/color/480/ielts.png",
+                        dates: "September 2022",
+                        company: "IELTS Academic",
+                        desc: "Obtained an overall band score of **8.0/9.0** translating to **C1** CEFR Level.", 
+                    }
+                ]}/>
+            </Block>
             <Block title="Competences">
                 My skill set is more or less uniform across major domains of CS. 
                 <ul style={{listStyleType: 'none', textIndent: 0}}>
@@ -137,16 +147,6 @@ export default function  Home(){
                         - Lastly, I have some dated experience with Haskell as well as Flask, OpenCV, Fastify, Express, and LLVM.
                     </li>
                 </ul>
-            </Block>
-            <Block title="Certifications">
-                <Enumer data={[
-                    {
-                        img_url: "https://img.icons8.com/color/480/ielts.png",
-                        dates: "September 2022",
-                        company: "IELTS Academic",
-                        desc: "Obtained an overall band score of **8.0/9.0** translating to **C1** CEFR Level.", 
-                    }
-                ]}/>
             </Block>
             <Block title="Curriculum Vitae" style={{position:"relative", textIndent: '0'}}>
                 {/* <iframe 

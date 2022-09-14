@@ -19,7 +19,7 @@ export default function Enumer({ className, style, data }){
             const pdesc = fdesc.substring(0, _overflow) + "...";
             const [s, setS] = useState(false);
             const smoref = fdesc.length > _overflow;
-            return <tr key={"enumer"+project+company+role}>
+            return <tr key={"enumer"+project+company+role+dates}>
                 <th><img src={img_url} className={styles.logo}/></th>
                 <td>
                     <a>
