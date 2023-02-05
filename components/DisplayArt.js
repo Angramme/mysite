@@ -39,7 +39,7 @@ export default function DisplayArt(){
             if(scrollDown.current)
                 scrollDown.current.style.bottom = `${1.5*window.scrollY|0}px`;
             if(artName.current)
-                artName.current.style.right = `${8-window.scrollY*.1|0}vh`;
+                artName.current.style.right = `${2-window.scrollY*.1|0}vh`;
         };
         window.addEventListener("scroll", scroller);
         return function cleanup(){
@@ -53,16 +53,16 @@ export default function DisplayArt(){
             className={styles.canvas}
             args={{darkmode, func: artpiece[0]}}
         />
-        <span ref={artName} className={styles.name}>
-            animation : <br/> <i>"{artpiece[1]}"</i>
-            <br/> <a className={styles.dice_con} onClick={shuffle}>Shuffle!
-            <span className={styles.dice} ><CgDice5/></span></a>
-        </span>
         <h2 className={styles.header} ref={scrollDown} key="h2"> 
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
             {Array.from("scroll down").map((l, i)=><span key={i+l}>{l}</span>)}
             <AiFillCaretDown style={{verticalAlign:"middle"}}/>
         </h2>
+        <span ref={artName} className={styles.name}>
+            animation : <i>"{artpiece[1]}"</i>
+            <br/> <a className={styles.dice_con} onClick={shuffle}>change animation!
+            <span className={styles.dice} ><CgDice5/></span></a>
+        </span>
     </div>
 }
 
