@@ -12,7 +12,7 @@ export default function Enumer({ className, style, data }){
     const styles = themify(styles_raw);
     const _overflow = 95;
     return <table className={styles.enumer}>
-        {data.map(({project, company, role, role_desc, desc, dates, img_url})=>{
+        {data.map(({project, company, company_full, company_url, role, role_desc, desc, dates, img_url})=>{
             const fdesc = 
                 (desc || "")
                 + (role_desc && ("\n\nRole: " + role_desc) || "");
@@ -23,8 +23,11 @@ export default function Enumer({ className, style, data }){
                 <th><img src={img_url} className={styles.logo}/></th>
                 <td>
                     <a>
-                        {dates} | {role && <><u>{role}</u> :</>} {company} 
-                        {project && <><br/> - {project}</>}
+                        {dates} | {role && <><u>{role}</u> :</>} {company_full} (
+                    </a>
+                    <a href={company_url} target="_blank" className={company_url ? styles.has_url : ""}>{company}</a>
+                    <a> 
+                        ) {project && <><br/> - {project}</>}
                     </a>
                     <ReactMarkdown 
                         className={styles.md}

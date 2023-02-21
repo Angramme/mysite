@@ -69,23 +69,37 @@ export default function  Home(){
                 <Enumer
                     data={[
                         {
+                            img_url: "https://swerc.eu/2021/theme/images/favicon.png",
+                            dates: "2022-23",
+                            company: "SWERC",
+                            company_full: "Southwestern Europe Regional Contest",
+                            company_url: "https://swerc.eu",
+                            desc: "**Ranked 36th** out of **120** teams from south-western europe (ranked **7th** among french teams), set a new historical record for Sorbonne Université at SWERC."
+                        },
+                        {
                             img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg",
                             dates: "2021-22",
-                            company: "French National Programming Contest (Prologin)",
+                            company: "Prologin",
+                            company_full: "French National Programming Contest", 
+                            company_url: "https://prologin.org",
                             role: "finalist",
                             desc: "9th place (out of 100 finalists and 1000 candidates)"
                         },
                         {
                             img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Prologin.svg",
                             dates: "2020-21",
-                            company: "French National Programming Contest (Prologin)",
+                            company: "Prologin",
+                            company_full: "French National Programming Contest", 
+                            company_url: "https://prologin.org",
                             role: "finalist",
                             desc: "25th place (out of 100 finalists and 1000 candidates)"
                         },
                         {
                             img_url: "https://swerc.eu/2021/theme/images/favicon.png",
                             dates: "2021-22",
-                            company: "Southwestern Europe Regional Contest (SWERC)",
+                            company: "SWERC",
+                            company_full: "Southwestern Europe Regional Contest",
+                            company_url: "https://swerc.eu",
                             desc: "represented Sorbonne Université"
                         },
                     ]}
