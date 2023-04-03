@@ -126,6 +126,28 @@ export default function  Home(){
                     }
                 ]}/>
             </Block>
+            <Block title="Education">
+                <Enumer data={[
+                    {
+                        img_url: "/ethz.png",
+                        role: "future student (accepted)",
+                        company: "ETHZ",
+                        company_url: "https://ethz.ch/en.html",
+                        company_full: "Swiss Federal Institute of Technology",
+                        project: "Computer Science MSc",
+                        dates: "2023-ONGOING"
+                    },
+                    {
+                        img_url: "/SU.png",
+                        company_url: "https://www.sorbonne-universite.fr",
+                        company_full: "Sorbonne Université",
+                        project: "Intensive double bachelor's in Computer Science and Mathematics",
+                        company: "SU",
+                        dates: "2020-2023"
+                    }
+                ]}
+                />
+            </Block>
             <Block title="Certifications">
                 <Enumer data={[
                     {
@@ -143,23 +165,23 @@ export default function  Home(){
                         - experience with designing and implementing algorithms (cf. programming competitions) which I primarily do in <B>C++</B>. 
                     </li>
                     <li>
-                        - experience with software engineering (designed and coded multiple projects from the ground up in C++, C, Python and others). 
+                        - experience with software engineering (designed and coded multiple projects from the ground up in C++, C, Python, Rust and others). 
                     </li>
                     <li>
                         - capable web-dev (cf. this website), implying knowledge in <B>JavaScript</B>, <B>Node.js</B>, <B>React</B>, <B>CSS</B>, <B>SASS</B>, <B>SCSS</B>, and <B>HTML</B>. I have made 2 projects with <B>Next.js</B>.
                     </li>
                     <li>
-                        -* In a related theme, I create generative art. I primarily use <B>GLSL</B> shaders, <B>three.js</B>, <B>Processing</B>, <B>p5.js</B> <B>SFML</B>, and other creative coding frameworks. 
+                        - Basic graphics programming. I create generative art (cf. Shadertoy). I primarily use <B>GLSL</B> shaders, <B>three.js</B>, <B>Processing</B>, <B>p5.js</B> <B>SFML</B>, and other creative coding frameworks. 
                     </li>
                     <li>
-                        - experience with <B>Python, OCaml, Rust</B>...
+                        - experience with <B>functional</B> programming languages (<B>Haskell, OCaml</B>)...
                     </li>
-                    <li>
+                    {/* <li>
                         - experience with relational (<B>SQL</B> style) databases
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                         - Lastly, I have some dated experience with Haskell as well as Flask, OpenCV, Fastify, Express, and LLVM.
-                    </li>
+                    </li> */}
                 </ul>
             </Block>
             <Block title="Curriculum Vitae" style={{position:"relative", textIndent: '0'}}>
