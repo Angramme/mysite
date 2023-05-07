@@ -159,7 +159,6 @@ export default function  Home(){
                 ]}/>
             </Block>
             <Block title="Competences">
-                My skill set is more or less uniform across major domains of CS. 
                 <ul style={{listStyleType: 'none', textIndent: 0}}>
                     <li>
                         - experience with designing and implementing algorithms (cf. programming competitions) which I primarily do in <B>C++</B>. 
@@ -171,17 +170,11 @@ export default function  Home(){
                         - capable web-dev (cf. this website), implying knowledge in <B>JavaScript</B>, <B>Node.js</B>, <B>React</B>, <B>CSS</B>, <B>SASS</B>, <B>SCSS</B>, and <B>HTML</B>. I have made 2 projects with <B>Next.js</B>.
                     </li>
                     <li>
-                        - Basic graphics programming. I create generative art (cf. Shadertoy). I primarily use <B>GLSL</B> shaders, <B>three.js</B>, <B>Processing</B>, <B>p5.js</B> <B>SFML</B>, and other creative coding frameworks. 
+                        - basic graphics programming. I create generative art (cf. Shadertoy). I primarily use <B>GLSL</B> shaders, <B>three.js</B>, <B>Processing</B>, <B>p5.js</B> <B>SFML</B>, and other creative coding frameworks. 
                     </li>
                     <li>
                         - experience with <B>functional</B> programming languages (<B>Haskell, OCaml</B>)...
                     </li>
-                    {/* <li>
-                        - experience with relational (<B>SQL</B> style) databases
-                    </li> */}
-                    {/* <li>
-                        - Lastly, I have some dated experience with Haskell as well as Flask, OpenCV, Fastify, Express, and LLVM.
-                    </li> */}
                 </ul>
             </Block>
             <Block title="Curriculum Vitae" style={{position:"relative", textIndent: '0'}}>
