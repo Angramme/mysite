@@ -123,6 +123,15 @@ export default function  Home(){
                         project: "DO-Calculus on Bayesian Networks",
                         desc: "The [aGrUM project](https://agrum.gitlab.io) is a library designed to facilitate the development of applications using probabilistic graphical models",
                         role_desc: 'Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base. Implementing this logic on networks in C++.'
+                    },
+                    {
+                        img_url: "/LIP6.png",
+                        dates: "July - August 2023",
+                        role: "Research Intern",
+                        company: "LIP6 - Sorbonne Université",
+                        project: "DO-Calculus on Bayesian Networks",
+                        desc: "The [aGrUM project](https://agrum.gitlab.io) is a library designed to facilitate the development of applications using probabilistic graphical models",
+                        role_desc: 'Collaborating with the supervising professor to architect the do-calculus and causality logic inside the existing code base. Implementing this logic on networks in C++.'
                     }
                 ]}/>
             </Block>
