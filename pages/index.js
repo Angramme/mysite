@@ -60,7 +60,7 @@ export default function  Home(){
                     <div style={{marginTop: "2.5rem"}}></div>
                     {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
                         <Block title="About me" style={{textAlign: 'justify'}}>
-                            I'm Kacper Ozieblowski, a third-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> (6yr in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
+                            I'm Kacper Ozieblowski, a third-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> ({new Date().getFullYear() - 2016} years in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
                         </Block>
                     {/* </ScrollRoll> */}
                 </div>
@@ -139,12 +139,12 @@ export default function  Home(){
                 <Enumer data={[
                     {
                         img_url: "/ethz.png",
-                        role: "future student (accepted)",
                         company: "ETHZ",
                         company_url: "https://ethz.ch/en.html",
                         company_full: "Swiss Federal Institute of Technology",
                         project: "Computer Science MSc",
-                        dates: "2023-ONGOING"
+                        dates: "2023-ONGOING",
+                        // desc: "Specialization in Machine Intelligence"
                     },
                     {
                         img_url: "/SU.png",
