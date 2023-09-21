@@ -60,7 +60,10 @@ export default function  Home(){
                     <div style={{marginTop: "2.5rem"}}></div>
                     {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
                         <Block title="About me" style={{textAlign: 'justify'}}>
-                            I'm Kacper Ozieblowski, a third-year <B>Sorbonne Université</B> student pursuing the <B>intensive double bachelor in Computer Science and Mathematics</B>. I'm passionate about technology and programming since the age of 14. I recently started to participate in programming <B>competitions</B> (more below). I create generative art with OpenGL as a hobby (Instagram @shaderfun). I have a good level of proficiency in <B>English</B> (C1), <B>French</B> ({new Date().getFullYear() - 2016} years in France), and <B>Polish</B> (native). Ex laborat I enjoy playing piano and very occasionally paint and draw. Lastly, I'm a novice indoor climber and a novice boxer.
+                            I'm Kacper Ozieblowski, a recent graduate of <B>Sorbonne Université</B> with a double bachelor's degree in Computer Science and Mathematics. Currently, I am furthering my studies at <B>ETH Zurich</B> in Computer Science, diving deeper into advanced topics in the field. 
+                            <br/>My passion for technology and programming ignited at the age of 14 and has since driven me to actively participate in programming <B>competitions</B>. Beyond academics, I channel my creativity into generative art using OpenGL, which I showcase on my Instagram page @shaderfun. Proficient in <B>English</B> (C1), <B>French</B> (having spent 6 years in France), and fluent in my native <B>Polish</B>, I am adept at communicating in diverse environments. 
+                            <br/>When not immersed in the world of coding and algorithms, I find solace in playing the piano. Additionally, I'm a budding indoor climber.
+
                         </Block>
                     {/* </ScrollRoll> */}
                 </div>
