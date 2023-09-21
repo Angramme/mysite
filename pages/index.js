@@ -63,6 +63,7 @@ export default function  Home(){
                             I'm Kacper Ozieblowski, a recent graduate of <B>Sorbonne Université</B> with a double bachelor's degree in Computer Science and Mathematics. Currently, I am furthering my studies at <B>ETH Zurich</B> in Computer Science, diving deeper into advanced topics in the field. 
                             <br/>My passion for technology and programming ignited at the age of 14 and has since driven me to actively participate in programming <B>competitions</B>. Beyond academics, I channel my creativity into generative art using OpenGL, which I showcase on my Instagram page @shaderfun. Proficient in <B>English</B> (C1), <B>French</B> (having spent 6 years in France), and fluent in my native <B>Polish</B>, I am adept at communicating in diverse environments. 
                             <br/>When not immersed in the world of coding and algorithms, I find solace in playing the piano. Additionally, I'm a budding indoor climber.
+
                         </Block>
                     {/* </ScrollRoll> */}
                 </div>
@@ -141,12 +142,12 @@ export default function  Home(){
                 <Enumer data={[
                     {
                         img_url: "/ethz.png",
-                        role: "future student (accepted)",
                         company: "ETHZ",
                         company_url: "https://ethz.ch/en.html",
                         company_full: "Swiss Federal Institute of Technology",
                         project: "Computer Science MSc",
-                        dates: "2023-ONGOING"
+                        dates: "2023-ONGOING",
+                        // desc: "Specialization in Machine Intelligence"
                     },
                     {
                         img_url: "/SU.png",
