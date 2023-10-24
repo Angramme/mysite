@@ -196,7 +196,8 @@ export default function  Home(){
                     height="800" 
                     allow="autoplay"
                     style={{width:"100%"}}/> */}
-                To see my full Curriculum-Vitae please <B><a href="https://drive.google.com/file/d/1-yOtogwUlTrnEv89h4iWT42lWKHOCcek/view?usp=sharing" target="_blank" rel="noopener"> &gt;click here&lt; </a></B>.
+                {/* To see my full Curriculum-Vitae please <B><a href="https://drive.google.com/file/d/1-yOtogwUlTrnEv89h4iWT42lWKHOCcek/view?usp=sharing" target="_blank" rel="noopener"> &gt;click here&lt; </a></B>. */}
+                To see my full Curriculum-Vitae please <B><a href="/CV_OZIEBLOWSKI_PUBLIC.pdf" target="_blank" rel="noopener"> &gt;click here&lt; </a></B>.
             </Block>
             <div className={styles.seemyprojects} style={{position:"relative"}}>
                 <IconContext.Provider value={{style: { verticalAlign: 'middle' }}}>
