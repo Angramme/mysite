@@ -32,7 +32,7 @@ export default function  Home(){
         </Head>
         <Menubar></Menubar>
         <AnimBackground></AnimBackground>
-        <Layout>
+        <Layout className={styles.main}>
             <h1 className={css_helpers.SEO_header}>Kacper Ozieblowski</h1>
             <h1 className={css_helpers.SEO_header}>Sorbonne University</h1>
 

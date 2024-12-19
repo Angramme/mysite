@@ -41,8 +41,10 @@ export default function DisplayArt(){
 
     useEffect(()=>{
         const scroller = ()=>{
-            if(scrollDown.current)
+            if(scrollDown.current){
                 scrollDown.current.style.bottom = `${1.5*window.scrollY|0}px`;
+                scrollDown.current.style.opacity = `${100-.5*window.scrollY|0}%`;
+            }
             if(artName.current)
                 artName.current.style.right = `${2-window.scrollY*.1|0}vh`;
         };
@@ -59,15 +61,13 @@ export default function DisplayArt(){
             args={{darkmode, func: artpiece[0]}}
         />
         <h2 className={styles.header} ref={scrollDown} key="h2"> 
-            <AiFillCaretDown style={{verticalAlign:"middle"}}/>
-            {Array.from("scroll down").map((l, i)=><span key={i+l}>{l}</span>)}
-            <AiFillCaretDown style={{verticalAlign:"middle"}}/>
+            {Array.from("scroll down scroll down scroll down scroll down scroll down scroll down").map((l, i)=><span key={i+l}>{l}</span>)}
         </h2>
-        <span ref={artName} className={styles.name}>
+        {/* <span ref={artName} className={styles.name}>
             animation : <i>"{artpiece[1]}"</i>
             <br/> <a className={styles.dice_con} onClick={shuffle}>change animation!
             <span className={styles.dice} ><CgDice5/></span></a>
-        </span>
+        </span> */}
     </div>
 }
 

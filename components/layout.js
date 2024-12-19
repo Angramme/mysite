@@ -2,9 +2,9 @@ import { themify } from "../lib/darkify"
 import styles_raw from "../styles/layout.module.sass"
 import CookieConsent from "react-cookie-consent";
 
-export default function Layout({children, style}) {
+export default function Layout({children, style, className}) {
     const styles = themify(styles_raw);
-    return <div className={styles.layout} style={style} lang="en-GB">
+    return <div className={`${className} ${styles.layout}`} style={style} lang="en-GB">
         {children}
 
         <CookieConsent

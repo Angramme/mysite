@@ -45,22 +45,26 @@
 
 .header
     position: relative
-    margin-top: 72vh
+    margin-top: 82vh
     margin-bottom: 5vh
     text-align: center
     // font-size: 3.3vh
-    font-size: global_vars.$font-size-big
+    font-size: global_vars.$font-size-medium
     font-weight: bold
     @keyframes jomp
         0%
             top: 0
         50%
-            top: -1.5vh
+            top: -1vh
         100%
             top: 0
     & > span
         position: relative
         animation: jomp 1.5s infinite ease-in-out
-        @for $i from 0 to 15 
+        @for $i from 0 to 120 
             &:nth-child(#{$i})
                 animation-delay: $i * 0.15s
+
+    .downarrow
+        vertical-align: middle
+        font-size: global_vars.$font-size-small
