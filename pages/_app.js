@@ -1,7 +1,8 @@
 import '../styles/globals.sass'
 import withDarkMode from 'next-dark-mode'
 
-import ReactTooltip from "react-tooltip"
+// import ReactTooltip from "react-tooltip"
+import { Tooltip as ReactTooltip } from "react-tooltip"
 import react from 'react'
 
 function MyApp({ Component, pageProps }) {

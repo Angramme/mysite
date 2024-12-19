@@ -3,27 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.12",
-    "dotenv": "^8.2.0",
+    "@octokit/rest": "^21.0.2",
+    "dotenv": "^16.4.7",
     "js-yaml-loader": "^1.2.2",
-    "next": "^12.0.7",
+    "next": "^15.1.2",
     "next-dark-mode": "^3.0.0",
-    "react": "^17.0.2",
-    "react-cookie-consent": "^7.0.1",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-markdown": "^7.1.1",
-    "react-syntax-highlighter": "^15.4.3",
-    "react-tooltip": "^4.2.21",
-    "remark-gfm": "^1.0.0",
-    "sass": "^1.29.0",
+    "react": "^19.0.0",
+    "react-cookie-consent": "^9.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-tooltip": "^5.28.0",
+    "remark-gfm": "^4.0.0",
+    "sass": "^1.83.0",
     "seed-random": "^2.2.0",
-    "simplex-noise": "^3.0.0",
-    "sitemap": "^6.3.6"
+    "simplex-noise": "^4.0.3",
+    "sitemap": "^8.0.0"
   }
 }

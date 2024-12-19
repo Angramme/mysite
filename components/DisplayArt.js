@@ -27,12 +27,17 @@ const ART = [
 export default function DisplayArt(){
     const styles = themify(styles_raw);
     const darkmode = useDarkMode().darkModeActive;
-    let [artpiece, setArtpiece] = useState(ART[Math.random() * ART.length |0]);
+    // let [artpiece, setArtpiece] = useState(ART[Math.random() * ART.length |0]);
+    let [artpiece, setArtpiece] = useState(ART[0]);
     const shuffle = ()=>{
         setArtpiece(ART[Math.random() * ART.length |0]);
     }
     let scrollDown = useRef(null);
     let artName = useRef(null);
+
+    useEffect(()=>{
+        shuffle();
+    }, []);
 
     useEffect(()=>{
         const scroller = ()=>{
