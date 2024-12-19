@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from "next/link"
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Menubar from "../components/menubar"
 import Layout from "../components/layout"
 import Block from "../components/block"
@@ -23,8 +23,7 @@ import DisplayArt from '../components/DisplayArt'
 export default function  Home(){
     const styles = themify(styles_raw);
     const B = ({children})=>(<span className={styles.bold}>{children}</span>);
-    return (
-        <>
+    return (<>
         <Head>
             <title>About</title>
             <link rel="icon" href="/profile-trans.png"/>
@@ -46,13 +45,12 @@ export default function  Home(){
                 <div className={styles.image_parent}>
                     <div className={styles.image}>
                         {/* <ScrollRoll begin={[0, 200]} end={[0, 0]} scroll_end={50}> */}
-                            <Image 
-                                layout="fill" 
-                                src="/photo.jpg" 
+                            <Image
+                                src="/photo.jpg"
                                 alt="photo of Kacper Ozieblowski"
                                 quality={90}
-                                sizes="50vh"
-                                />
+                                fill
+                                sizes="50vh" />
                         {/* </ScrollRoll> */}
                     </div>
                 </div>
@@ -210,6 +208,5 @@ export default function  Home(){
             </div>
         </Layout>
         <Footer></Footer>
-        </>
-    )
+    </>);
 }

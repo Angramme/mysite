@@ -4,7 +4,7 @@ import AnimatedBackground from "../../components/AnimatedBackground"
 import Footer from "../../components/footer"
 import Link from "next/link"
 import Head from "next/head"
-import Image from "next/legacy/image"
+import Image from "next/image"
 
 import DarkMode from "../../components/darkmode_button"
 
@@ -79,7 +79,7 @@ export default function Project({project}){
             {/* <Block className={styles.banner} style={{backgroundImage:`url(${project.img})`}}> */}
             <Block className={styles.banner}>
                 <div className={styles.banner_image}>
-                    <Image layout="fill" src={project.img}></Image>
+                    <Image src={project.img} fill sizes="100vw"></Image>
                 </div>
                 <h1 className={styles.title}>{project.name}</h1>
                 <div className={styles.options}>
@@ -105,5 +105,5 @@ export default function Project({project}){
     </Layout>
     <Footer></Footer>
     <DarkMode className={styles.darkmode_btn}/>
-    </>
+    </>;
 }
