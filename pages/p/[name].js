@@ -4,7 +4,7 @@ import AnimatedBackground from "../../components/AnimatedBackground"
 import Footer from "../../components/footer"
 import Link from "next/link"
 import Head from "next/head"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 import DarkMode from "../../components/darkmode_button"
 

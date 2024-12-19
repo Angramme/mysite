@@ -2,7 +2,7 @@ import styles_raw from "../styles/project_banner.module.sass"
 import {themify} from "../lib/darkify"
 
 import Link from "next/link"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import ReactMarkdown from 'react-markdown'
 
 import {IconContext} from "react-icons"
