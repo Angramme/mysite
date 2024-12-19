@@ -1,5 +1,5 @@
-@import "../styles/global_vars.sass"
-@import "../styles/CSS3_mixins.scss"
+@use "../styles/global_vars.sass"
+@use "../styles/CSS3_mixins.scss"
 
 .footer
     // color: $selected-color
@@ -12,15 +12,15 @@
 
     padding-top: 2rem
     padding-bottom: 1.5rem
-    background: $primary
+    background: global_vars.$primary
     // border-top: solid 1px $border-color
-    color: $text-color
+    color: global_vars.$text-color
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
     &._dark
-        background: $dk-primary
-        color: $dk-text-color
-        border-top-color: $dk-border-color
-    @media #{$is-a-phone}
+        background: global_vars.$dk-primary
+        color: global_vars.$dk-text-color
+        border-top-color: global_vars.$dk-border-color
+    @media #{global_vars.$is-a-phone}
         padding: 4rem
 

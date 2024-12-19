@@ -1,16 +1,16 @@
-@import "../styles/global_vars"
+@use "../styles/global_vars"
 
 $accent-color: rgb(89, 114, 255)
 
 .title
     font-weight: bold
     // font-size: 5vh
-    font-size: $font-size-big
+    font-size: global_vars.$font-size-big
     background: rgba(0, 0, 0, 0.5)
     display: inline
 
 .banner
-    color: $dk-text-color
+    color: global_vars.$dk-text-color
     padding: 2rem
     padding-bottom: 1rem
     // transform: rotate(1.5deg)
@@ -36,20 +36,20 @@ $accent-color: rgb(89, 114, 255)
         display: inline
         margin-left: 1.5rem
     & div:hover
-        color: $selected-color
+        color: global_vars.$selected-color
 
 .back_btn
     position: fixed
     left: 2rem
     top: 2rem
     font-size: 1.1rem
-    background: $frosted-glass
+    background: global_vars.$frosted-glass
 
     cursor: pointer
     transition: color 0.2s
     &:hover
-        color: $selected-color
-    @media #{$is-a-phone}
+        color: global_vars.$selected-color
+    @media #{global_vars.$is-a-phone}
         font-size: 1rem
         top: 1rem
         left: 0rem
@@ -57,7 +57,7 @@ $accent-color: rgb(89, 114, 255)
 .md
     margin: 1.5rem
     text-indent: 0
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         margin: 0
 
 
@@ -73,11 +73,11 @@ $accent-color: rgb(89, 114, 255)
         // background: $dk-frosted-glass
     & td
         padding: .2rem 1.2rem
-        border-left: dashed 1px $border-color
-        border-right: dashed 1px $border-color
+        border-left: dashed 1px global_vars.$border-color
+        border-right: dashed 1px global_vars.$border-color
         &._dark
-            border-left: dashed 1px $dk-border-color
-            border-right: dashed 1px $dk-border-color
+            border-left: dashed 1px global_vars.$dk-border-color
+            border-right: dashed 1px global_vars.$dk-border-color
 
     & td:first-child
         padding-left: none
@@ -91,7 +91,7 @@ $accent-color: rgb(89, 114, 255)
     // text-decoration: underline wavy
     color: $accent-color
     font-size: 1.8rem
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         margin-top: 3rem
 
 .md_link
@@ -131,5 +131,5 @@ $accent-color: rgb(89, 114, 255)
     top: 2rem
     right: 2rem
     z-index: 10
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         top: 1rem

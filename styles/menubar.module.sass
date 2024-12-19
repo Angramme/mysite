@@ -1,5 +1,6 @@
-@import "../styles/global_vars.sass"
-@import "../styles/CSS3_mixins.scss"
+@use "sass:math"
+@use "../styles/global_vars.sass"
+@use "../styles/CSS3_mixins.scss"
 
 $switch-layout: "(max-aspect-ratio: 6/5)"
 
@@ -8,7 +9,7 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     position: relative
     z-index: 100
     // background: $frosted-glass
-    background: linear-gradient(180deg, $frosted-glass, $frosted-glass, rgba(255, 255, 255, 0))
+    background: linear-gradient(180deg, global_vars.$frosted-glass, global_vars.$frosted-glass, rgba(255, 255, 255, 0))
     // backdrop-filter: blur($blur-amount) //hue-rotate($hue-rotate) opacity($background-opacity)
     position: fixed
     top:0
@@ -17,12 +18,12 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     padding: 1rem
     padding-top: 1.5rem
     // border-bottom: solid $border-color 1px
-    color: $text-color
+    color: global_vars.$text-color
     &._dark
-        color: $dk-text-color
+        color: global_vars.$dk-text-color
         // background: $dk-frosted-glass
-        background: linear-gradient(180deg, $dk-frosted-glass, $dk-frosted-glass, rgba(0, 0, 0, 0))
-        border-bottom-color: $dk-border-color
+        background: linear-gradient(180deg, global_vars.$dk-frosted-glass, global_vars.$dk-frosted-glass, rgba(0, 0, 0, 0))
+        border-bottom-color: global_vars.$dk-border-color
     @media #{$switch-layout}
         padding: 0.5rem
         padding-top: 1rem
@@ -48,7 +49,7 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     font-weight: bold
     margin: 0 0 0 3rem
     display: inline
-    +transition(filter 0.4s, color 0.5s)
+    +CSS3_mixins.transition(filter 0.4s, color 0.5s)
 
     & > .header_text
         display: inline
@@ -76,7 +77,7 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
 
     @for $i from 0 to 20
         & > .header_text > span:nth-child(#{$i})
-            animation-delay: random(10)*0.1s
+            animation-delay: math.random(10)*0.1s
 
     @media #{$switch-layout}
         margin: 0
@@ -114,14 +115,14 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     margin-top: 0.5rem
 
     &:hover, &:active
-        color: $selected-color
+        color: global_vars.$selected-color
         cursor: pointer
         font-weight: bold
-        border-color: $border-color
+        border-color: global_vars.$border-color
     &._dark:hover
-        color: $dk-selected-color
-        border-color: $dk-border-color
-    @media #{$is-a-phone}
+        color: global_vars.$dk-selected-color
+        border-color: global_vars.$dk-border-color
+    @media #{global_vars.$is-a-phone}
         padding: 0 .5rem
 
 .dark_mode_switch
@@ -129,7 +130,7 @@ $switch-layout: "(max-aspect-ratio: 6/5)"
     right: 2rem
     top: 1.5rem
     @media #{$switch-layout}
-        font-size: $font-size-small
+        font-size: global_vars.$font-size-small
         top: .1rem
         right: .1rem
         

@@ -1,40 +1,40 @@
-@import "../styles/global_vars"
-@import "../styles/CSS3_mixins.scss"
+@use "../styles/global_vars"
+@use "../styles/CSS3_mixins.scss"
 
 // @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap')
 
 .container
     position: relative
     margin: 1rem
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         margin: 1.5rem 0
 
 .header
     font-weight: bolder
     // font-size: 4.5vh
-    font-size: $font-size-giant
+    font-size: global_vars.$font-size-giant
     margin-left: 0.6rem
     margin-bottom: 0.7rem
-    color: $text-color
+    color: global_vars.$text-color
     &._dark
-        color: $dk-text-color
+        color: global_vars.$dk-text-color
 
 .block
     line-height: 1.2em
 
-    color: $text-color
+    color: global_vars.$text-color
     // border: solid 0.1px $border-color
-    background: $frosted-glass-opaque
+    background: global_vars.$frosted-glass-opaque
     // backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
-    border-radius: $border-radius
+    border-radius: global_vars.$border-radius
     padding: 1rem
     text-indent: 1.5rem
     &._dark
-        color: $dk-text-color
-        border-color: $dk-border-color
-        background: $dk-frosted-glass-opaque
-    @media #{$is-a-phone}
+        color: global_vars.$dk-text-color
+        border-color: global_vars.$dk-border-color
+        background: global_vars.$dk-frosted-glass-opaque
+    @media #{global_vars.$is-a-phone}
         text-indent: 0
         padding: 1rem .7rem
         border-radius: 0

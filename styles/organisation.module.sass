@@ -1,10 +1,10 @@
-@import "../styles/global_vars.sass"
-@import "../styles/CSS3_mixins.scss"
+@use "../styles/global_vars.sass"
+@use "../styles/CSS3_mixins.scss"
 
 .line
     display: flex
     flex-direction: row
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         flex-direction: column
 
 .line-wrap

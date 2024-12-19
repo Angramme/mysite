@@ -1,11 +1,11 @@
-@import '../styles/global_vars'
+@use '../styles/global_vars'
     
 .parent
     position: relative
 
 .dice
     // font-size: 2.3vh
-    font-size: $font-size-normal
+    font-size: global_vars.$font-size-normal
     margin-left: 1.2rem
     vertical-align: middle
     display: inline-block
@@ -21,17 +21,17 @@
 .name
     font-weight: bold
     // font-size: 2.1vh
-    font-size: $font-size-normal
+    font-size: global_vars.$font-size-normal
     text-align: end
     position: fixed
     bottom: 6vh
     right: 5vw
     padding: 1.5vh
     // border: solid $text-color 1px
-    background-color: $primary
+    background-color: global_vars.$primary
     opacity: 0.8
     &._dark
-        background-color: $dk-primary
+        background-color: global_vars.$dk-primary
         // border: solid $dk-text-color 1px
         
 
@@ -49,7 +49,7 @@
     margin-bottom: 5vh
     text-align: center
     // font-size: 3.3vh
-    font-size: $font-size-big
+    font-size: global_vars.$font-size-big
     font-weight: bold
     @keyframes jomp
         0%

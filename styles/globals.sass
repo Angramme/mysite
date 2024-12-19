@@ -1,4 +1,4 @@
-@import ./global_vars.sass
+@use "global_vars.sass"
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,900&display=swap')
 
@@ -32,16 +32,16 @@ a
 
 /* Track */
 ::-webkit-scrollbar-track 
-  background: $dk-secondary
+  background: global_vars.$dk-secondary
 
 
 /* Handle */
 ::-webkit-scrollbar-thumb 
-  background-color: $dk-text-color
+  background-color: global_vars.$dk-text-color
   border-radius: 0.2rem
 
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover 
-  background-color: $dk-frosted-glass-opaque
+  background-color: global_vars.$dk-frosted-glass-opaque
 

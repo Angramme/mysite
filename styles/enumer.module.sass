@@ -1,4 +1,4 @@
-@import ./global_vars
+@use "global_vars"
     
 .enumer
     text-indent: 0
@@ -18,9 +18,9 @@
     & th
         padding: 0.5rem 0 0.5rem 0
     & tr:not(:last-child) > th
-        border-bottom: solid 1px $text-color
+        border-bottom: solid 1px global_vars.$text-color
     &._dark > tr > th
-        border-color: $dk-text-color
+        border-color: global_vars.$dk-text-color
     & a.has_url
         text-decoration: underline
         color: rgb(21, 138, 255)

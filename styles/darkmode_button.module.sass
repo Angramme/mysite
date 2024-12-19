@@ -1,13 +1,13 @@
-@import "../styles/global_vars"
+@use "../styles/global_vars"
     
 .btn
-    color: $text-color
+    color: global_vars.$text-color
     // font-size: 2.5vh
     font-size: 1.6rem
     cursor: pointer
     &._dark
-        color: $dk-text-color
+        color: global_vars.$dk-text-color
     &:hover
-        color: $selected-color
+        color: global_vars.$selected-color
     &._dark:hover
-        color: $dk-selected-color
+        color: global_vars.$dk-selected-color

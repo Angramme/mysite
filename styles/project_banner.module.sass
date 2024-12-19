@@ -1,12 +1,12 @@
-@import "../styles/global_vars"
-@import "../styles/CSS3_mixins.scss"
+@use "../styles/global_vars"
+@use "../styles/CSS3_mixins.scss"
 
 .project
-    color: $text-color
-    border: solid 0.1px $border-color
-    background: $frosted-glass-opaque
+    color: global_vars.$text-color
+    border: solid 0.1px global_vars.$border-color
+    background: global_vars.$frosted-glass-opaque
     // backdrop-filter: blur($blur-amount) hue-rotate($hue-rotate) opacity($background-opacity)
-    border-radius: $border-radius
+    border-radius: global_vars.$border-radius
     // padding: 1rem
     // text-indent: 1.5rem
     padding: 0
@@ -19,15 +19,15 @@
     display: flex
 
     &:hover
-        border-color: $selected-color
+        border-color: global_vars.$selected-color
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25)
     &._dark
-        color: $dk-text-color
-        border-color: $dk-border-color
-        background: $dk-frosted-glass-opaque
+        color: global_vars.$dk-text-color
+        border-color: global_vars.$dk-border-color
+        background: global_vars.$dk-frosted-glass-opaque
     &._dark:hover
-        border-color: $dk-selected-color
-    @media #{$is-a-phone}
+        border-color: global_vars.$dk-selected-color
+    @media #{global_vars.$is-a-phone}
         flex-direction: column
         backdrop-filter: none
         
@@ -42,7 +42,7 @@
 .left
     position: relative
     padding: 1rem
-    background: $secondary
+    background: global_vars.$secondary
     font-size: .85rem
     
     width: 20%
@@ -50,8 +50,8 @@
     flex-grow: 0
     flex-shrink: 0
     &._dark
-        background: $dk-secondary
-    @media #{$is-a-phone}
+        background: global_vars.$dk-secondary
+    @media #{global_vars.$is-a-phone}
         width: unset
 
 .right
@@ -78,9 +78,9 @@
     right: -2rem
     width: 100%
     height: 15vh
-    background-image: linear-gradient(to top, $frosted-glass-opaque, $frosted-glass-opaque, rgba(0, 0, 0, 0))
+    background-image: linear-gradient(to top, global_vars.$frosted-glass-opaque, global_vars.$frosted-glass-opaque, rgba(0, 0, 0, 0))
     &._dark
-        background-image: linear-gradient(to top, $dk-frosted-glass-opaque, $dk-frosted-glass-opaque, rgba(0, 0, 0, 0))
+        background-image: linear-gradient(to top, global_vars.$dk-frosted-glass-opaque, global_vars.$dk-frosted-glass-opaque, rgba(0, 0, 0, 0))
         
 .readMore
     position: absolute
@@ -91,7 +91,7 @@
     transition: color 0.2s
     cursor: pointer
     &:hover
-        color: $selected-color
+        color: global_vars.$selected-color
 
 .little_desc
     color: #494a4e
@@ -101,7 +101,7 @@
 .language
     margin: 0.8rem 0
     margin-bottom: 6rem
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         margin-bottom: 1rem
 
 .options
@@ -114,8 +114,8 @@
         cursor: pointer
         transition: 0.2s color
         &:hover
-            color: $selected-color
-    @media #{$is-a-phone}
+            color: global_vars.$selected-color
+    @media #{global_vars.$is-a-phone}
         position: relative
         bottom: 0
         left: 0
@@ -137,7 +137,7 @@
     overflow: hidden
     width: 100%
     height: 15vh
-    @media #{$is-a-phone}
+    @media #{global_vars.$is-a-phone}
         height: 25vh
 
 .img_container_full
@@ -155,4 +155,4 @@
 .md_link
     text-decoration: underline
     &:hover
-        color: $selected-color
+        color: global_vars.$selected-color

@@ -1,5 +1,5 @@
-@import "../styles/global_vars.sass"
-@import "../styles/CSS3_mixins.scss"
+@use "../styles/global_vars.sass"
+@use "../styles/CSS3_mixins.scss"
 
 .layout
     position: relative
@@ -14,6 +14,6 @@
     // border-left: solid 1px $border-color
     // border-right: solid 1px $border-color
     // +box-shadow(2px 2px 15px black)
-    color: $text-color
+    color: global_vars.$text-color
     &._dark
-        color: $dk-text-color
+        color: global_vars.$dk-text-color
